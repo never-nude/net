@@ -5,4 +5,4 @@ JS path: web.js?v=1772690399
 Data paths: topology.web.json?v=1772481939-1772690399 ; scenarios.web.json?v=1772481939-1772690399 ; neurotransmitters.web.json?v=1772481939-1772690399 ; sources.web.json?v=1772481939-1772690399
 Local dev URL: http://127.0.0.1:6657/model/web/?v=1772690399
 Live URL (www): https://www.digitalbrain.live/model/web/?v=1772690399
-Live URL (gh):  https://never-nude.github.io/model/web/?v=1772690399
+Live URL (gh):  https://never-nude.github.io/net/model/web/?v=1772690399

@@ -3,6 +3,11 @@ Neuron Web Signal Atlas bundle
 Open:
   model/web/index.html
 
+GitHub Pages:
+  https://never-nude.github.io/net/
+Direct app path:
+  https://never-nude.github.io/net/model/web/index.html
+
 If serving locally (recommended):
   cd model
   python3 -m http.server 6657 --bind 127.0.0.1
