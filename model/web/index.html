@@ -1,0 +1,1371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>model - Neuron Web Signal Atlas</title>
+    <style>
+      :root {
+        --safe-top: env(safe-area-inset-top, 0px);
+        --safe-right: env(safe-area-inset-right, 0px);
+        --safe-bottom: env(safe-area-inset-bottom, 0px);
+        --safe-left: env(safe-area-inset-left, 0px);
+        --ink-0: #040912;
+        --ink-1: #081325;
+        --ink-2: #0b1b34;
+        --bg-radial-a: #173666;
+        --bg-radial-b: #2b1f47;
+        --glass: rgba(8, 18, 36, 0.74);
+        --glass-border: rgba(164, 205, 255, 0.26);
+        --txt: #eaf4ff;
+        --txt-dim: #bcd0e9;
+        --panel-bg: rgba(8, 18, 36, 0.78);
+        --panel-soft-bg: rgba(9, 18, 36, 0.74);
+        --panel-border: rgba(162, 206, 255, 0.36);
+        --panel-soft-border: rgba(162, 206, 255, 0.32);
+        --panel-shadow: 0 18px 48px rgba(5, 14, 31, 0.36);
+        --card-bg: rgba(103, 152, 218, 0.09);
+        --card-border: rgba(165, 210, 255, 0.24);
+      }
+
+      body[data-style="diagram"] {
+        --ink-0: #070f19;
+        --ink-1: #0b1725;
+        --ink-2: #102135;
+        --bg-radial-a: rgba(0, 0, 0, 0);
+        --bg-radial-b: rgba(0, 0, 0, 0);
+        --glass: rgba(9, 18, 31, 0.84);
+        --glass-border: rgba(163, 197, 228, 0.3);
+        --txt: #ebf4ff;
+        --txt-dim: #bfd1e3;
+        --panel-bg: rgba(9, 18, 31, 0.86);
+        --panel-soft-bg: rgba(9, 18, 31, 0.8);
+        --panel-border: rgba(163, 197, 228, 0.34);
+        --panel-soft-border: rgba(163, 197, 228, 0.3);
+        --panel-shadow: 0 16px 42px rgba(3, 10, 18, 0.44);
+        --card-bg: rgba(87, 124, 162, 0.12);
+        --card-border: rgba(161, 197, 228, 0.25);
+      }
+
+      body[data-style="diagram"]::before {
+        background: radial-gradient(130% 120% at 50% 50%, rgba(8, 16, 28, 0) 38%, rgba(8, 16, 28, 0.46) 100%);
+      }
+
+      body[data-style="cinematic"] {
+        --ink-0: #080a12;
+        --ink-1: #131826;
+        --ink-2: #1a2a38;
+        --bg-radial-a: #7a4a1f;
+        --bg-radial-b: #1f5477;
+        --glass: rgba(16, 18, 30, 0.82);
+        --glass-border: rgba(255, 209, 158, 0.31);
+        --txt: #fff3e6;
+        --txt-dim: #e6cfb3;
+        --panel-bg: rgba(16, 18, 30, 0.86);
+        --panel-soft-bg: rgba(19, 20, 33, 0.8);
+        --panel-border: rgba(255, 209, 158, 0.35);
+        --panel-soft-border: rgba(255, 209, 158, 0.29);
+        --panel-shadow: 0 22px 54px rgba(6, 8, 14, 0.52);
+        --card-bg: rgba(196, 145, 84, 0.14);
+        --card-border: rgba(255, 206, 150, 0.27);
+      }
+
+      body[data-style="clinical"] {
+        --ink-0: #03090f;
+        --ink-1: #0a1a24;
+        --ink-2: #11242f;
+        --bg-radial-a: #1f4961;
+        --bg-radial-b: #315062;
+        --glass: rgba(9, 21, 30, 0.76);
+        --glass-border: rgba(176, 212, 236, 0.28);
+        --txt: #edf6ff;
+        --txt-dim: #c3d7e6;
+        --panel-bg: rgba(8, 22, 33, 0.8);
+        --panel-soft-bg: rgba(9, 22, 33, 0.74);
+        --panel-border: rgba(176, 212, 236, 0.33);
+        --panel-soft-border: rgba(176, 212, 236, 0.26);
+        --panel-shadow: 0 18px 48px rgba(3, 10, 15, 0.42);
+        --card-bg: rgba(113, 157, 186, 0.12);
+        --card-border: rgba(178, 212, 234, 0.26);
+      }
+
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background:
+          radial-gradient(1200px 680px at 24% 20%, var(--bg-radial-a) 0%, rgba(23, 54, 102, 0) 60%),
+          radial-gradient(980px 560px at 76% 76%, var(--bg-radial-b) 0%, rgba(43, 31, 71, 0) 58%),
+          linear-gradient(160deg, var(--ink-0) 0%, var(--ink-1) 52%, var(--ink-2) 100%);
+        color: var(--txt);
+        font: 13px/1.25 "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        background:
+          radial-gradient(closest-side at 50% 50%, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0) 70%),
+          radial-gradient(120% 120% at 50% 50%, rgba(4, 8, 18, 0) 35%, rgba(4, 8, 18, 0.48) 100%);
+      }
+
+      canvas {
+        display: block;
+        touch-action: none;
+      }
+
+      #partLabels {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      #partLabels .part-label {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(196, 231, 255, 0.44);
+        border-radius: 999px;
+        padding: 3px 10px;
+        font-size: 10.5px;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        line-height: 1.2;
+        color: #edf8ff;
+        background: rgba(11, 24, 44, 0.88);
+        white-space: nowrap;
+        box-shadow: 0 8px 20px rgba(8, 20, 44, 0.38);
+      }
+
+      #build,
+      #hud,
+      #masthead,
+      #graphSemantics,
+      #panel,
+      #liveNarrationPanel,
+      #mobileDock,
+      #regionQuickCard {
+        z-index: 20;
+      }
+
+      #build,
+      #hud {
+        position: fixed;
+        left: calc(var(--safe-left) + 12px);
+        color: var(--txt);
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        padding: 8px 10px;
+        border-radius: 10px;
+        pointer-events: none;
+        max-width: calc(100vw - var(--safe-left) - var(--safe-right) - 24px);
+        white-space: pre-wrap;
+        backdrop-filter: blur(7px);
+        display: none;
+      }
+
+      #masthead {
+        position: fixed;
+        left: calc(var(--safe-left) + 12px);
+        top: calc(var(--safe-top) + 12px);
+        width: 320px;
+        pointer-events: none;
+        padding: 8px 10px;
+        border-radius: 11px;
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        backdrop-filter: blur(7px);
+      }
+
+      #masthead .name {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        line-height: 1.25;
+        color: #f0f8ff;
+      }
+
+      #masthead .sub {
+        margin-top: 4px;
+        font-size: 12px;
+        line-height: 1.3;
+        opacity: 0.88;
+        color: var(--txt-dim);
+      }
+
+      #graphSemantics {
+        position: fixed;
+        left: calc(var(--safe-left) + 12px);
+        top: calc(var(--safe-top) + 110px);
+        width: 320px;
+        pointer-events: none;
+        padding: 7px 10px;
+        border-radius: 11px;
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        color: var(--txt-dim);
+        font-size: 12px;
+        line-height: 1.3;
+        backdrop-filter: blur(7px);
+      }
+
+      #graphSemantics .line + .line {
+        margin-top: 3px;
+      }
+
+      #build {
+        top: calc(var(--safe-top) + 12px);
+      }
+
+      #hud {
+        top: calc(var(--safe-top) + 58px);
+      }
+
+      #hud.error {
+        color: #ffb3b3;
+      }
+
+      #panel {
+        position: fixed;
+        right: calc(var(--safe-right) + 12px);
+        top: calc(var(--safe-top) + 12px);
+        width: 320px;
+        max-height: calc(100vh - var(--safe-top) - var(--safe-bottom) - 24px);
+        overflow: auto;
+        color: var(--txt);
+        background: var(--panel-bg);
+        border: 1px solid var(--panel-border);
+        border-radius: 14px;
+        padding: 12px;
+        user-select: none;
+        pointer-events: auto;
+        backdrop-filter: blur(9px);
+        box-shadow: var(--panel-shadow);
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+      }
+
+      #liveNarrationPanel {
+        position: fixed;
+        left: calc(var(--safe-left) + 12px);
+        top: calc(var(--safe-top) + 220px);
+        bottom: calc(var(--safe-bottom) + 12px);
+        width: 280px;
+        min-height: 160px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        color: var(--txt);
+        background: var(--panel-soft-bg);
+        border: 1px solid var(--panel-soft-border);
+        border-radius: 14px;
+        padding: 10px;
+        pointer-events: auto;
+        backdrop-filter: blur(8px);
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+      }
+
+      #regionQuickCard {
+        position: fixed;
+        left: calc(var(--safe-left) + 12px);
+        bottom: calc(var(--safe-bottom) + 12px);
+        width: 280px;
+        max-height: 180px;
+        overflow: auto;
+        color: var(--txt);
+        background: var(--panel-soft-bg);
+        border: 1px solid var(--panel-soft-border);
+        border-radius: 14px;
+        padding: 10px;
+        pointer-events: none;
+        backdrop-filter: blur(8px);
+      }
+
+      #regionQuickCard .title {
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-bottom: 6px;
+      }
+
+      #regionQuickCard .summary {
+        font-size: 12px;
+        line-height: 1.35;
+        opacity: 0.92;
+      }
+
+      #regionQuickCard.empty .title {
+        opacity: 0.78;
+      }
+
+      #regionQuickCard.empty .summary {
+        opacity: 0.72;
+      }
+
+      #partExplainCard {
+        border: 1px solid rgba(178, 220, 255, 0.3);
+        border-radius: 9px;
+        background: rgba(10, 20, 38, 0.72);
+        padding: 8px;
+        margin-top: 8px;
+        max-height: none;
+        overflow: auto;
+      }
+
+      #partExplainCard .kicker {
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        opacity: 0.82;
+        margin-bottom: 4px;
+      }
+
+      #partExplainCard .title {
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+
+      #partExplainCard .text {
+        font-size: 12px;
+        line-height: 1.4;
+        opacity: 0.94;
+      }
+
+      #partExplainCard.empty .text {
+        opacity: 0.76;
+      }
+
+      #liveNarrationPanel .title {
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        margin-bottom: 8px;
+      }
+
+      #liveNarrationLog {
+        flex: 0 1 auto;
+        min-height: 112px;
+        max-height: 40%;
+        overflow: auto;
+        font-size: 12px;
+        line-height: 1.35;
+        border: 1px solid rgba(176, 216, 255, 0.22);
+        border-radius: 8px;
+        background: rgba(9, 18, 34, 0.66);
+        padding: 8px;
+      }
+
+      #liveNarrationLog .line {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        margin: 0 0 6px;
+        padding: 6px 7px;
+        border-radius: 7px;
+      }
+
+      #liveNarrationLog .line:last-child {
+        margin-bottom: 0;
+      }
+
+      #liveNarrationLog .line.stage {
+        cursor: pointer;
+        border: 1px solid rgba(154, 194, 255, 0.20);
+        background: rgba(125, 168, 235, 0.08);
+      }
+
+      #liveNarrationLog .line.stage:hover,
+      #liveNarrationLog .line.stage:focus {
+        border-color: rgba(182, 223, 255, 0.64);
+        background: rgba(134, 190, 255, 0.18);
+        outline: none;
+      }
+
+      #liveNarrationLog .line.current {
+        border-color: rgba(184, 235, 255, 0.78);
+        background: rgba(124, 181, 255, 0.24);
+      }
+
+      #liveNarrationLog .line.note {
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      #liveNarrationLog .stage-badge {
+        flex: 0 0 auto;
+        border: 1px solid rgba(184, 217, 255, 0.45);
+        border-radius: 999px;
+        padding: 1px 8px;
+        font-size: 11px;
+        line-height: 1.3;
+        color: #d6edff;
+        background: rgba(125, 175, 235, 0.22);
+      }
+
+      #liveNarrationLog .stage-badge.note {
+        border-color: rgba(255, 255, 255, 0.22);
+        color: rgba(235, 240, 250, 0.84);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      #selectedPartExplain {
+        border: 1px solid rgba(178, 220, 255, 0.3);
+        border-radius: 9px;
+        background: rgba(10, 20, 38, 0.72);
+        padding: 8px;
+        max-height: none;
+        overflow: auto;
+      }
+
+      #selectedPartExplain .kicker {
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        opacity: 0.82;
+        margin-bottom: 4px;
+      }
+
+      #selectedPartExplain .title {
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      #selectedPartExplain .text {
+        font-size: 12px;
+        line-height: 1.4;
+        opacity: 0.94;
+      }
+
+      #selectedPartExplain.empty .text {
+        opacity: 0.76;
+      }
+
+      #selectedNeuronTypeCard {
+        border: 1px solid rgba(178, 220, 255, 0.3);
+        border-radius: 9px;
+        background: rgba(10, 20, 38, 0.72);
+        padding: 8px;
+        max-height: none;
+        overflow: auto;
+      }
+
+      #selectedNeuronTypeCard .kicker {
+        font-size: 11px;
+        letter-spacing: 0.03em;
+        opacity: 0.82;
+        margin-bottom: 4px;
+      }
+
+      #selectedNeuronTypeCard .title {
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      #selectedNeuronTypeCard .text {
+        font-size: 12px;
+        line-height: 1.4;
+        opacity: 0.94;
+      }
+
+      #selectedNeuronTypeCard.empty .text {
+        opacity: 0.76;
+      }
+
+      #panel .title {
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        margin-bottom: 8px;
+      }
+
+      #stimSelectBlock {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        background: var(--card-bg);
+        padding: 10px;
+      }
+
+      #visualStyleBlock {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        background: var(--card-bg);
+        padding: 8px 10px;
+      }
+
+      body[data-style="daylight"] {
+        --ink-0: #d4ecff;
+        --ink-1: #b7dcf8;
+        --ink-2: #8fc4e8;
+        --bg-radial-a: #f0f8ff;
+        --bg-radial-b: #d8ebfb;
+        --glass: rgba(238, 248, 255, 0.82);
+        --glass-border: rgba(73, 134, 184, 0.36);
+        --txt: #102841;
+        --txt-dim: #355a7b;
+        --panel-bg: rgba(236, 247, 255, 0.84);
+        --panel-soft-bg: rgba(236, 247, 255, 0.8);
+        --panel-border: rgba(81, 141, 191, 0.42);
+        --panel-soft-border: rgba(81, 141, 191, 0.34);
+        --panel-shadow: 0 12px 34px rgba(50, 92, 128, 0.24);
+        --card-bg: rgba(138, 189, 225, 0.19);
+        --card-border: rgba(72, 132, 182, 0.28);
+      }
+
+      #stimSelectBlock .small {
+        font-size: 13px;
+        font-weight: 600;
+        opacity: 0.96;
+        margin-bottom: 6px;
+      }
+
+      #stimSelect {
+        font-size: 15px;
+        font-weight: 600;
+        min-height: 38px;
+      }
+
+      #stimSummaryBlock {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        background: var(--card-bg);
+        padding: 8px 10px;
+      }
+
+      #stimSummaryLabel {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        opacity: 0.96;
+        margin-bottom: 5px;
+      }
+
+      #stimExplain {
+        font-size: 12.5px;
+        line-height: 1.44;
+        min-height: 52px;
+      }
+
+      #stimSourceBlock {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        background: var(--card-bg);
+        padding: 8px 10px;
+      }
+
+      #stimSourceLabel {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        opacity: 0.96;
+        margin-bottom: 5px;
+      }
+
+      #stimSourceBlock .src-line {
+        font-size: 12px;
+        line-height: 1.35;
+        opacity: 0.9;
+        margin: 2px 0;
+      }
+
+      #stimSourceBlock a {
+        color: #8fd4ff;
+        text-decoration: none;
+      }
+
+      #stimSourceBlock a:hover {
+        text-decoration: underline;
+      }
+
+      #scrubRateBlock,
+      #gainBlock,
+      #breadthBlock,
+      #exportBlock,
+      #edgeThresholdBlock,
+      #networkContextBlock {
+        display: none;
+      }
+
+      #basisBlock,
+      #graphBlock,
+      #atlasMapBlock,
+      #graphSemantics,
+      #regionQuickCard {
+        display: none;
+      }
+
+      #signalGuideBlock,
+      #miniKey {
+        display: none;
+      }
+
+      #quickStartCard {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        background: var(--card-bg);
+        padding: 8px 10px;
+        line-height: 1.4;
+      }
+
+      #panel .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin: 8px 0;
+      }
+
+      #panel .stack {
+        margin: 8px 0;
+      }
+
+      #panel .small {
+        opacity: 0.86;
+        font-size: 12px;
+      }
+
+      #panel .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      #stimConfidence {
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 999px;
+        padding: 2px 8px;
+        opacity: 1;
+      }
+
+      #stimConfidence.conf-low {
+        border-color: rgba(255, 165, 155, 0.78);
+        color: #ffb4a8;
+      }
+
+      #stimConfidence.conf-medium {
+        border-color: rgba(255, 210, 120, 0.82);
+        color: #ffd878;
+      }
+
+      #stimConfidence.conf-high {
+        border-color: rgba(143, 226, 180, 0.85);
+        color: #98efc7;
+      }
+
+      #panel hr {
+        border: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        margin: 10px 0;
+      }
+
+      #panel input[type="range"],
+      #panel select,
+      #panel input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      #panel select,
+      #panel input[type="text"] {
+        color: #f0f8ff;
+        background: rgba(10, 20, 38, 0.78);
+        border: 1px solid rgba(172, 216, 255, 0.27);
+        border-radius: 8px;
+        padding: 6px 8px;
+      }
+
+      #panel button {
+        background: rgba(104, 163, 230, 0.14);
+        color: #f0f8ff;
+        border: 1px solid rgba(176, 219, 255, 0.3);
+        border-radius: 10px;
+        padding: 8px 10px;
+        min-height: 34px;
+        cursor: pointer;
+      }
+
+      #panel button:active {
+        transform: translateY(1px);
+      }
+
+      #transport {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      #stepControls,
+      #arrivalJumpControls,
+      #narrationControls {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      #regionSearchRow {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+        margin-top: 6px;
+      }
+
+      #atlasMapBlock {
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        background: var(--card-bg);
+        padding: 8px 10px;
+      }
+
+      #atlasRegionRow {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+        margin-top: 6px;
+      }
+
+      #atlasRegionCard {
+        margin-top: 6px;
+        border: 1px solid rgba(168, 215, 255, 0.2);
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.24);
+        padding: 7px 8px;
+      }
+
+      #atlasRegionCard .title {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        color: #f3f8ff;
+      }
+
+      #atlasRegionText {
+        margin-top: 4px;
+        line-height: 1.35;
+        color: #d9eafc;
+      }
+
+      #regionSearchSuggest {
+        margin-top: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.34);
+        max-height: 140px;
+        overflow: auto;
+      }
+
+      #regionSearchSuggest[hidden] {
+        display: none;
+      }
+
+      #regionSearchSuggest .item {
+        display: block;
+        width: 100%;
+        text-align: left;
+        border: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 0;
+        background: transparent;
+        color: #eaf5ff;
+        padding: 8px 10px;
+        min-height: 0;
+      }
+
+      #regionSearchSuggest .item:last-child {
+        border-bottom: 0;
+      }
+
+      #regionSearchSuggest .item.active {
+        background: rgba(130, 178, 236, 0.24);
+      }
+
+      #progressWrap {
+        width: 100%;
+        height: 8px;
+        border-radius: 999px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      #progressFill {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, #4a566c, #cfdced);
+      }
+
+      #pathSequence {
+        max-height: 132px;
+        overflow: auto;
+        white-space: pre-wrap;
+        background: rgba(0, 0, 0, 0.26);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        padding: 8px;
+      }
+
+      #majorRegionWords {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        min-height: 28px;
+        margin-top: 6px;
+      }
+
+      #majorRegionWords .token {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid rgba(190, 220, 255, 0.35);
+        border-radius: 999px;
+        padding: 2px 8px;
+        font-size: 11px;
+        background: rgba(138, 175, 225, 0.12);
+        color: rgba(225, 240, 255, 0.86);
+        opacity: 0.86;
+      }
+
+      #majorRegionWords .token.lead {
+        border-color: rgba(170, 235, 255, 0.85);
+        background: rgba(140, 208, 255, 0.24);
+        color: #f4fbff;
+        font-weight: 600;
+      }
+
+      #exportRow {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      #miniKey {
+        margin-top: 8px;
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        padding: 7px 8px;
+        background: var(--card-bg);
+      }
+
+      #miniKey .hint {
+        margin-top: 4px;
+        opacity: 0.72;
+      }
+
+      #edgeToggleRow {
+        display: none;
+      }
+
+      #legendBar {
+        height: 10px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #313849 0%, #667185 50%, #edf4ff 100%);
+      }
+
+      #arrivalBar {
+        height: 10px;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #ff2a2a 0%, #ff9a2c 18%, #ffe044 36%, #00ef7f 56%, #09d8ff 78%, #3f69ff 100%);
+      }
+
+      #colorGuideStops {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 6px;
+      }
+
+      #colorGuideStops .swatch {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        padding: 2px 8px;
+        font-size: 11px;
+        background: rgba(0, 0, 0, 0.22);
+      }
+
+      #colorGuideStops .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+      }
+
+      #mobileDock {
+        display: none;
+      }
+
+      @media (max-width: 520px), (pointer: coarse) {
+        #build,
+        #hud {
+          font-size: 12px;
+          line-height: 1.24;
+        }
+
+        #masthead {
+          left: calc(var(--safe-left) + 12px);
+          right: calc(var(--safe-right) + 12px);
+          width: auto;
+          padding: 7px 9px;
+        }
+
+        #masthead .name {
+          font-size: 14px;
+        }
+
+        #masthead .sub {
+          font-size: 11px;
+        }
+
+        #graphSemantics {
+          left: calc(var(--safe-left) + 12px);
+          right: calc(var(--safe-right) + 12px);
+          width: auto;
+          top: calc(var(--safe-top) + 104px);
+          font-size: 11px;
+          line-height: 1.25;
+          padding: 6px 8px;
+        }
+
+        #mobileDock {
+          position: fixed;
+          left: calc(var(--safe-left) + 28px);
+          right: calc(var(--safe-right) + 28px);
+          bottom: calc(var(--safe-bottom) + 12px);
+          z-index: 40;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 6px;
+          padding: 0;
+          pointer-events: auto;
+        }
+
+        #mobileDock button {
+          width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
+          min-height: 44px;
+          border-radius: 999px;
+          border: 1px solid rgba(174, 219, 255, 0.42);
+          background: rgba(4, 12, 34, 0.88);
+          color: #eff7ff;
+          font-size: 12px;
+          line-height: 1.2;
+          font-weight: 600;
+          letter-spacing: 0.02em;
+          padding: 8px 4px;
+          touch-action: manipulation;
+        }
+
+        #mobileDock button[aria-pressed="true"] {
+          border-color: rgba(176, 237, 255, 0.9);
+          background: rgba(45, 112, 172, 0.9);
+          color: #fff;
+        }
+
+        #panel {
+          left: calc(var(--safe-left) + 12px);
+          right: calc(var(--safe-right) + 12px);
+          top: auto;
+          bottom: calc(var(--safe-bottom) + 64px);
+          width: auto;
+          max-height: 58vh;
+          display: none;
+        }
+
+        #liveNarrationPanel {
+          left: calc(var(--safe-left) + 12px);
+          right: calc(var(--safe-right) + 12px);
+          width: auto;
+          top: calc(var(--safe-top) + 146px);
+          max-height: 46vh;
+          display: none;
+        }
+
+        #liveNarrationLog {
+          min-height: 90px;
+        }
+
+        #selectedPartExplain {
+          max-height: 36%;
+        }
+
+        body.mobile-panel-open #panel {
+          display: block;
+        }
+
+        body.mobile-log-open #liveNarrationPanel {
+          display: block;
+        }
+
+        #regionQuickCard {
+          display: none;
+        }
+
+        #partExplainCard {
+          max-height: 120px;
+        }
+
+        #panel button,
+        #panel select,
+        #panel input[type="text"] {
+          font-size: 14px;
+        }
+
+        #panel input[type="checkbox"] {
+          transform: scale(1.25);
+          transform-origin: left center;
+        }
+
+        body.mobile-panel-open #masthead,
+        body.mobile-log-open #masthead {
+          display: none;
+        }
+      }
+
+      /* iPhone 15/16-class tuning (393-440px wide touch screens) */
+      @media only screen and (max-width: 440px) and (pointer: coarse) and (hover: none) {
+        #masthead {
+          left: calc(var(--safe-left) + 10px);
+          right: calc(var(--safe-right) + 10px);
+          top: calc(var(--safe-top) + 8px);
+          border-radius: 12px;
+          padding: 7px 9px;
+        }
+
+        #graphSemantics {
+          left: calc(var(--safe-left) + 10px);
+          right: calc(var(--safe-right) + 10px);
+          top: calc(var(--safe-top) + 100px);
+          border-radius: 12px;
+          padding: 6px 8px;
+          font-size: 10.5px;
+        }
+
+        #liveNarrationPanel {
+          left: calc(var(--safe-left) + 10px);
+          right: calc(var(--safe-right) + 10px);
+          top: calc(var(--safe-top) + 140px);
+          bottom: calc(var(--safe-bottom) + 64px);
+          max-height: none;
+          border-radius: 12px;
+          padding: 10px;
+        }
+
+        #panel {
+          left: calc(var(--safe-left) + 10px);
+          right: calc(var(--safe-right) + 10px);
+          bottom: calc(var(--safe-bottom) + 66px);
+          max-height: min(60dvh, 560px);
+          border-radius: 14px;
+          padding: 10px;
+        }
+
+        #mobileDock {
+          left: calc(var(--safe-left) + 12px);
+          right: calc(var(--safe-right) + 12px);
+          bottom: calc(var(--safe-bottom) + 8px);
+          gap: 7px;
+        }
+
+        #mobileDock button {
+          min-height: 46px;
+          font-size: 12px;
+          padding: 8px 6px;
+        }
+
+        #partLabels .part-label {
+          max-width: 44vw;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    </style>
+    <style>
+      #basisBlock,
+      #graphBlock,
+      #atlasMapBlock,
+      #networkContextBlock,
+      #scrubRateBlock,
+      #gainBlock,
+      #breadthBlock,
+      #exportBlock,
+      #edgeThresholdBlock,
+      #miniKey,
+      #regionQuickCard {
+        display: none !important;
+      }
+    </style>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "../vendor/three/build/three.module.js",
+          "three/addons/": "../vendor/three/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="build">WEB • VERITAS • BUILD 1772690399</div>
+    <div id="hud">Loading...</div>
+    <div id="masthead" aria-hidden="true">
+      <div class="name">Neuron Web Signal Atlas</div>
+      <div class="sub">
+        Interactive model of a deterministic multi-neuron web showing directed signal propagation, inhibitory and excitatory routing, and modulatory context.
+        Use this for educational interpretation, not for diagnosis or treatment decisions.
+      </div>
+    </div>
+    <div id="graphSemantics" aria-hidden="true">
+      <div class="line">Neuron markers - deterministic radial-web nodes with visible soma, nucleus, dendrites, axon hillock, proximal/distal axon, and boutons.</div>
+      <div class="line">Signal pulse - directed edge propagation showing excitatory, inhibitory, and modulatory effects over scenario time.</div>
+    </div>
+    <div id="liveNarrationPanel" aria-live="polite">
+      <div class="title">Live narration</div>
+      <div id="liveNarrationLog">Waiting for pathway events...</div>
+      <div id="selectedPartExplain" class="empty" aria-live="polite">
+        <div class="kicker">Selected neuron brief</div>
+        <div id="selectedPartTitle" class="title">No neuron selected</div>
+        <div id="selectedPartText" class="text">Click a neuron to see a plain-language regional summary.</div>
+      </div>
+      <div id="selectedNeuronTypeCard" class="empty" aria-live="polite">
+        <div class="kicker">Phenotype profile</div>
+        <div id="selectedNeuronTypeTitle" class="title">No phenotype profile selected</div>
+        <div id="selectedNeuronTypeText" class="text">Select a neuron to view its clinical-functional phenotype profile.</div>
+      </div>
+      <div id="partExplainCard" class="empty" aria-live="polite">
+        <div class="kicker">Structure Notes</div>
+        <div id="partExplainTitle" class="title">No anatomical structure selected</div>
+        <div id="partExplainText" class="text">Select a highlighted structure on the selected neuron to see a plain-language morphology note.</div>
+      </div>
+    </div>
+    <div id="mobileDock" aria-label="Mobile overlay controls">
+      <button id="btnMobilePanel" type="button" aria-pressed="false">Controls</button>
+      <button id="btnMobileNarration" type="button" aria-pressed="false">Narration</button>
+      <button id="btnMobileCanvas" type="button" aria-pressed="false">Canvas</button>
+    </div>
+
+    <div id="panel">
+      <div class="title">Neuron Web Control Console</div>
+      <div id="quickStartCard" class="small">
+        1) Pick a neurotransmitter mode. 2) Press Play. 3) Click neurons for concise role explainers. 4) Use milestone stepping to follow flow.
+      </div>
+      <div class="stack" id="stimSelectBlock">
+        <div class="small">Animation (stimulus)</div>
+        <select id="stimSelect"></select>
+      </div>
+
+      <div class="stack" id="arrangementBlock">
+        <div class="small">Arrangement</div>
+        <select id="layoutSelect">
+          <option value="spiderweb" selected>Radial spider web</option>
+        </select>
+        <div id="layoutStatus" class="small mono">Arrangement: radial spider web</div>
+      </div>
+
+      <div class="stack" id="visualStyleBlock">
+        <div class="small">Visual style</div>
+        <select id="styleSelect">
+          <option value="diagram" selected>Diagram</option>
+          <option value="schematic">Schematic</option>
+          <option value="cinematic">Cinematic</option>
+          <option value="clinical">Clinical</option>
+        </select>
+        <div id="styleStatus" class="small mono">Visual style: diagram</div>
+      </div>
+
+      <div class="stack" id="neurotransmitterBlock">
+        <div class="small">Neurotransmitter mode</div>
+        <select id="neuroModeSelect">
+          <option value="glutamate" selected>Glutamate (excitatory)</option>
+          <option value="gaba">GABA (inhibitory)</option>
+          <option value="dopamine">Dopamine (modulatory)</option>
+          <option value="acetylcholine">Acetylcholine (modulatory/excitatory)</option>
+          <option value="serotonin">Serotonin (modulatory context)</option>
+        </select>
+        <div id="neuroModeStatus" class="small mono">Mode: glutamate excitatory drive</div>
+      </div>
+
+      <div id="stimSummaryBlock" class="stack">
+        <div id="stimSummaryLabel">Animation summary</div>
+        <div id="stimExplain" class="small">
+          Select an animation to view a concise educational summary of radial-web signal behavior being simulated.
+        </div>
+      </div>
+
+      <div class="row">
+        <label><input id="toggleAuto" type="checkbox" />Auto-rotate</label>
+        <button id="btnReset" type="button">Reset view</button>
+      </div>
+
+      <div class="stack" id="basisBlock">
+        <div class="small">Evidence source</div>
+        <select id="basisSelect">
+          <option value="full" selected>Atlas Full (Max regions)</option>
+          <option value="empirical">Empirical Anchors</option>
+          <option value="template">Template Consensus</option>
+        </select>
+        <div class="small mono" id="basisStatus">Basis: loading...</div>
+      </div>
+
+      <div class="stack" id="graphBlock">
+        <div class="small">Detail level</div>
+        <select id="graphSelect">
+          <option value="dense" selected>Dense (3200 total nodes)</option>
+          <option value="core">Core (AAL 116)</option>
+        </select>
+        <div class="small mono" id="graphStatus">Graph: loading...</div>
+        <div class="small mono" id="connectivityStatus">Connectivity: loading...</div>
+      </div>
+
+      <div class="stack" id="atlasMapBlock">
+        <div class="small">Atlas region mapping</div>
+        <div id="atlasMapStatus" class="small mono">Atlas map: loading...</div>
+        <div id="atlasCoverageLine" class="small mono">Coverage: loading...</div>
+        <div id="atlasRegionRow">
+          <input id="atlasRegionInput" type="text" placeholder="e.g., Thalamus_L, Precentral_R" />
+          <button id="btnAtlasRegionSearch" type="button">Lookup</button>
+        </div>
+        <div id="atlasRegionStatus" class="small mono">Region lookup: enter atlas region</div>
+        <div id="atlasRegionCard">
+          <div id="atlasRegionTitle" class="title">No atlas region selected</div>
+          <div id="atlasRegionText" class="small">Search a mapped region for concise what/how/where/why context.</div>
+        </div>
+      </div>
+
+      <div class="stack" id="networkContextBlock">
+        <div class="small">Web context</div>
+        <div class="row">
+          <label><input id="toggleInputNeuron" type="checkbox" />Show upstream input neuron</label>
+        </div>
+        <div class="row">
+          <label><input id="toggleOutputNeuron" type="checkbox" />Show downstream output neuron</label>
+        </div>
+        <div id="networkContextStatus" class="small mono">Context: full radial web visible</div>
+      </div>
+
+      <div class="row small mono">
+        <div id="timelineText">Scenario progress: preparing estimate...</div>
+        <div id="statusText">ready</div>
+      </div>
+
+      <div id="progressWrap"><div id="progressFill"></div></div>
+
+      <div class="row">
+        <div>Position in scenario</div>
+        <div id="scrubVal" class="mono">0%</div>
+      </div>
+      <input id="scrubRange" type="range" min="0" max="25" step="0.01" value="0" />
+
+      <div id="scrubRateBlock">
+        <div class="row">
+          <div>Step size</div>
+          <div id="scrubRateVal" class="mono">0.50s/step</div>
+        </div>
+        <input id="scrubRateRange" type="range" min="0.10" max="2.00" step="0.10" value="0.50" />
+      </div>
+
+      <div id="arrivalJumpBlock" class="stack">
+        <div class="small">Jump by signal milestone</div>
+      <div id="arrivalJumpControls" class="stack">
+        <button id="btnPrevArrival" type="button">Prev milestone</button>
+        <button id="btnNextArrival" type="button">Next milestone</button>
+      </div>
+      </div>
+
+      <div id="transport" class="stack">
+        <button id="btnPlay" type="button">Play</button>
+        <button id="btnPause" type="button">Pause</button>
+        <button id="btnStop" type="button">Stop</button>
+      </div>
+
+      <div class="row">
+        <div>Mode</div>
+        <select id="modeSelect">
+          <option value="once">Once</option>
+          <option value="loop" selected>Loop</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div>Playback speed</div>
+        <div id="speedVal" class="mono">1.00x</div>
+      </div>
+      <input id="speedRange" type="range" min="0.25" max="3.00" step="0.05" value="1.00" />
+
+      <div id="gainBlock">
+        <div class="row">
+          <div>Signal strength</div>
+          <div id="gainVal" class="mono">1.00</div>
+        </div>
+        <input id="gainRange" type="range" min="0.20" max="2.50" step="0.05" value="1.00" />
+      </div>
+
+      <div id="breadthBlock">
+        <div class="row">
+          <div>Path coverage</div>
+          <div id="breadthVal" class="mono">0.88</div>
+        </div>
+        <input id="breadthRange" type="range" min="0.60" max="0.98" step="0.01" value="0.88" />
+      </div>
+
+      <hr />
+
+      <div class="stack" id="signalGuideBlock">
+      <div class="small">Signal phase spectrum (initiation to downstream effect)</div>
+        <div id="arrivalBar"></div>
+        <div class="small">
+          Color guide: red means initial drive; warm colors show active spread; cool colors show late-phase modulation and reset.
+        </div>
+        <div id="colorGuideStops">
+          <span class="swatch"><span class="dot" style="background:#ff2a2a;"></span>Arrival</span>
+          <span class="swatch"><span class="dot" style="background:#ff9a2c;"></span>Early spread</span>
+          <span class="swatch"><span class="dot" style="background:#ffe044;"></span>Rising activity</span>
+          <span class="swatch"><span class="dot" style="background:#00ef7f;"></span>Mid-path</span>
+          <span class="swatch"><span class="dot" style="background:#09d8ff;"></span>Late phase</span>
+          <span class="swatch"><span class="dot" style="background:#3f69ff;"></span>Leaving/decay</span>
+        </div>
+      </div>
+
+      <div class="stack" id="exportBlock">
+        <div class="small">Download path report (advanced)</div>
+        <div id="exportRow">
+          <button id="btnExportJson" type="button">Export JSON</button>
+          <button id="btnExportCsv" type="button">Export CSV</button>
+        </div>
+        <div id="exportStatus" class="small mono">Export: ready</div>
+      </div>
+
+      <hr />
+
+      <div id="edgeThresholdBlock">
+        <div class="row">
+          <div>Connection visibility threshold</div>
+          <div id="edgeVal" class="mono">0.08</div>
+        </div>
+        <input id="edgeThresh" type="range" min="0" max="1" step="0.01" value="0.08" />
+      </div>
+
+      <div id="miniKey" class="small">
+        <strong>Controls:</strong>
+        <div class="hint mono">Mouse: left-drag rotate | right-drag pan | scroll zoom</div>
+      </div>
+
+      <div id="stimSourceBlock" class="stack">
+        <div id="stimSourceLabel">Sources</div>
+        <div class="src-line">Deterministic 24-neuron educational radial web model.</div>
+        <div id="stimSourceTier" class="src-line">Scenario source: loading...</div>
+        <div id="stimSourceLinks" class="src-line">Links: loading...</div>
+      </div>
+    </div>
+
+    <div id="regionQuickCard" class="empty" aria-live="polite">
+      <div id="regionQuickTitle" class="title">Hover or select a neuron</div>
+      <div id="regionQuickSummary" class="summary">Concise educational role details appear here.</div>
+    </div>
+    <div id="partLabels" aria-hidden="true"></div>
+
+    <script type="module" src="./web.js?v=1772738546"></script>
+  </body>
+</html>

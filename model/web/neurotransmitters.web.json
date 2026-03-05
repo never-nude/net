@@ -1,0 +1,65 @@
+{
+  "source_name": "neurotransmitters.web.json",
+  "profiles": [
+    {
+      "id": "glutamate",
+      "label": "Glutamate",
+      "mode_summary": "Fast excitatory propagation with strong warm pulses and broad downstream activation.",
+      "signal_color": "#ff8e3a",
+      "edge_color": "#f0b06e",
+      "neuron_glow": "#ffbe7f",
+      "pulse_speed_scale": 1.05,
+      "strength_scale": 1.0,
+      "inhibitory_scale": 1.0,
+      "modulatory_scale": 0.9
+    },
+    {
+      "id": "gaba",
+      "label": "GABA",
+      "mode_summary": "Dominant inhibition with cool pulses, stronger suppression, and reduced downstream carryover.",
+      "signal_color": "#4ec3ff",
+      "edge_color": "#71a7d8",
+      "neuron_glow": "#84d8ff",
+      "pulse_speed_scale": 0.88,
+      "strength_scale": 0.76,
+      "inhibitory_scale": 1.35,
+      "modulatory_scale": 0.72
+    },
+    {
+      "id": "dopamine",
+      "label": "Dopamine",
+      "mode_summary": "Modulatory gain mode with selective amplification in high-weight pathways and delayed decay.",
+      "signal_color": "#ffc940",
+      "edge_color": "#d5b978",
+      "neuron_glow": "#ffe18a",
+      "pulse_speed_scale": 0.96,
+      "strength_scale": 0.9,
+      "inhibitory_scale": 0.92,
+      "modulatory_scale": 1.35
+    },
+    {
+      "id": "acetylcholine",
+      "label": "Acetylcholine",
+      "mode_summary": "Task-focused modulatory/excitatory mode with sharper propagation and boosted relay precision.",
+      "signal_color": "#6edb6f",
+      "edge_color": "#8bc089",
+      "neuron_glow": "#b4ef9d",
+      "pulse_speed_scale": 1.14,
+      "strength_scale": 1.08,
+      "inhibitory_scale": 0.9,
+      "modulatory_scale": 1.18
+    },
+    {
+      "id": "serotonin",
+      "label": "Serotonin",
+      "mode_summary": "Context-stabilizing modulation with softer pulses and dampened high-amplitude transitions.",
+      "signal_color": "#f08ea7",
+      "edge_color": "#c89aae",
+      "neuron_glow": "#f7b7c6",
+      "pulse_speed_scale": 0.84,
+      "strength_scale": 0.82,
+      "inhibitory_scale": 1.08,
+      "modulatory_scale": 1.12
+    }
+  ]
+}

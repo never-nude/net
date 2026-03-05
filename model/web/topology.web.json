@@ -1,0 +1,865 @@
+{
+  "source_name": "topology.web.json",
+  "model_id": "deterministic_web_24_v1",
+  "model_name": "Deterministic 24-neuron radial web model",
+  "description": "A central-radiating directed neuron web with ring and cross-links for educational signal-flow visualization.",
+  "neurons": [
+    {
+      "id": "N01",
+      "label": "Retina Input A",
+      "region": "Sensory relay",
+      "layer": 0,
+      "position": [
+        1.859,
+        0.12,
+        0.476
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "retina a",
+        "sensory a",
+        "n01"
+      ],
+      "explainer": {
+        "what": "This neuron is an entry-point sensory relay that injects external drive into the network.",
+        "how": "It propagates short-latency excitatory pulses into early integration nodes.",
+        "where": "It sits on the input edge of the network in the first layer.",
+        "why": "Anchoring propagation here makes it clear how feedforward activity begins and branches."
+      }
+    },
+    {
+      "id": "N02",
+      "label": "Retina Input B",
+      "region": "Sensory relay",
+      "layer": 0,
+      "position": [
+        0.978,
+        0.28,
+        1.652
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "retina b",
+        "sensory b",
+        "n02"
+      ],
+      "explainer": {
+        "what": "This neuron is a parallel sensory input channel with matching timing precision.",
+        "how": "It drives neighboring relay units to form convergent evidence.",
+        "where": "It is placed in the first input row near N01.",
+        "why": "Parallel input paths demonstrate how networks combine multiple upstream streams."
+      }
+    },
+    {
+      "id": "N03",
+      "label": "Auditory Cue",
+      "region": "Sensory relay",
+      "layer": 0,
+      "position": [
+        -0.476,
+        0.08,
+        1.859
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "auditory",
+        "cue",
+        "n03"
+      ],
+      "explainer": {
+        "what": "This neuron represents a second modality signal entering the same circuit.",
+        "how": "It excites selective relay targets with slightly delayed onset.",
+        "where": "It occupies the lower input channel in layer zero.",
+        "why": "Including a nonvisual input helps show multimodal convergence."
+      }
+    },
+    {
+      "id": "N04",
+      "label": "Context Prime",
+      "region": "Sensory relay",
+      "layer": 0,
+      "position": [
+        -1.652,
+        0.22,
+        0.978
+      ],
+      "class": "modulatory",
+      "aliases": [
+        "context",
+        "prime",
+        "n04"
+      ],
+      "explainer": {
+        "what": "This neuron provides contextual priming input instead of pure feedforward evidence.",
+        "how": "Its output scales downstream responsiveness rather than forcing spikes alone.",
+        "where": "It sits in the input layer but projects broadly into integration nodes.",
+        "why": "Context channels make modulation effects visible and educational."
+      }
+    },
+    {
+      "id": "N05",
+      "label": "Relay 1",
+      "region": "Early integration",
+      "layer": 1,
+      "position": [
+        -1.859,
+        -0.12,
+        -0.476
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "relay 1",
+        "n05"
+      ],
+      "explainer": {
+        "what": "This neuron is an early relay that pools two upstream streams.",
+        "how": "It amplifies synchronized input and forwards it to mid-network hubs.",
+        "where": "It is in the second layer on the dorsal side of the network.",
+        "why": "It illustrates convergence and threshold-like amplification."
+      }
+    },
+    {
+      "id": "N06",
+      "label": "Relay 2",
+      "region": "Early integration",
+      "layer": 1,
+      "position": [
+        1.045,
+        0.05,
+        0.105
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "relay 2",
+        "n06"
+      ],
+      "explainer": {
+        "what": "This relay node channels mixed sensory input toward the central path.",
+        "how": "It sends medium-weight projections into both excitatory and inhibitory interneurons.",
+        "where": "It sits near the geometric center of layer one.",
+        "why": "Balanced projections help explain divergent routing."
+      }
+    },
+    {
+      "id": "N07",
+      "label": "Relay 3",
+      "region": "Early integration",
+      "layer": 1,
+      "position": [
+        0.665,
+        0.16,
+        0.812
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "relay 3",
+        "n07"
+      ],
+      "explainer": {
+        "what": "This neuron acts as a central relay across competing pathways.",
+        "how": "Its outputs split toward inhibitory gating and forward projection.",
+        "where": "It is positioned on the midline of layer one.",
+        "why": "This split clarifies how one node can influence opposite outcomes."
+      }
+    },
+    {
+      "id": "N08",
+      "label": "Relay 4",
+      "region": "Early integration",
+      "layer": 1,
+      "position": [
+        -0.978,
+        -0.28,
+        -1.652
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "relay 4",
+        "n08"
+      ],
+      "explainer": {
+        "what": "This relay carries lower-path sensory and contextual mixtures.",
+        "how": "It provides sustained drive to modulatory and motor-prep nodes.",
+        "where": "It appears on the ventral side of layer one.",
+        "why": "A lower-path relay makes spatial pathway differences easy to read."
+      }
+    },
+    {
+      "id": "N09",
+      "label": "Inhibitory Gate A",
+      "region": "Interneuron gate",
+      "layer": 1,
+      "position": [
+        0.476,
+        -0.08,
+        -1.859
+      ],
+      "class": "inhibitory",
+      "aliases": [
+        "gate a",
+        "inhibitory a",
+        "n09"
+      ],
+      "explainer": {
+        "what": "This interneuron provides fast inhibitory gating to prevent runaway spread.",
+        "how": "It suppresses selected hubs when incoming activity exceeds moderate levels.",
+        "where": "It is in the first integration layer near upper relay nodes.",
+        "why": "It shows how inhibition sharpens signal selectivity."
+      }
+    },
+    {
+      "id": "N10",
+      "label": "Inhibitory Gate B",
+      "region": "Interneuron gate",
+      "layer": 1,
+      "position": [
+        -0.105,
+        -0.05,
+        1.045
+      ],
+      "class": "inhibitory",
+      "aliases": [
+        "gate b",
+        "inhibitory b",
+        "n10"
+      ],
+      "explainer": {
+        "what": "This neuron is a complementary inhibitory gate on the lower branch.",
+        "how": "It dampens competing routes and limits late reverberation.",
+        "where": "It sits ventrally in layer one.",
+        "why": "Paired inhibitory gates make directional suppression visible."
+      }
+    },
+    {
+      "id": "N11",
+      "label": "Hub A",
+      "region": "Mid-network hub",
+      "layer": 2,
+      "position": [
+        0,
+        0.02,
+        0
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "hub a",
+        "n11"
+      ],
+      "explainer": {
+        "what": "This hub aggregates upper-branch relays into coherent downstream drive.",
+        "how": "It integrates excitatory input while receiving inhibitory veto from gate A.",
+        "where": "It is located in the central layer toward the dorsal side.",
+        "why": "It demonstrates balance between drive and control."
+      }
+    },
+    {
+      "id": "N12",
+      "label": "Hub B",
+      "region": "Mid-network hub",
+      "layer": 2,
+      "position": [
+        -0.812,
+        -0.16,
+        0.665
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "hub b",
+        "n12"
+      ],
+      "explainer": {
+        "what": "This hub routes mixed sensory evidence toward decision and motor-prep nodes.",
+        "how": "Its weighted outgoing edges distribute graded drive based on upstream timing.",
+        "where": "It occupies the central corridor of layer two.",
+        "why": "Central hubs make branching propagation legible."
+      }
+    },
+    {
+      "id": "N13",
+      "label": "Hub C",
+      "region": "Mid-network hub",
+      "layer": 2,
+      "position": [
+        -1.045,
+        0.05,
+        -0.105
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "hub c",
+        "n13"
+      ],
+      "explainer": {
+        "what": "This hub couples lower sensory streams into forward relay pathways.",
+        "how": "It receives excitation plus inhibitory sculpting from gate B.",
+        "where": "It lies in the lower-middle region of layer two.",
+        "why": "It clarifies how inhibition can redirect rather than fully block flow."
+      }
+    },
+    {
+      "id": "N14",
+      "label": "Hub D",
+      "region": "Mid-network hub",
+      "layer": 2,
+      "position": [
+        1.652,
+        -0.22,
+        -0.978
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "hub d",
+        "n14"
+      ],
+      "explainer": {
+        "what": "This node carries lower-path context to output planning units.",
+        "how": "It has stronger sensitivity to modulatory transmitter modes.",
+        "where": "It is ventral in the central layer.",
+        "why": "It demonstrates state-dependent gain in contextual pathways."
+      }
+    },
+    {
+      "id": "N15",
+      "label": "Dopaminergic Modulator",
+      "region": "Modulatory lane",
+      "layer": 2,
+      "position": [
+        -0.665,
+        0.16,
+        -0.812
+      ],
+      "class": "modulatory",
+      "aliases": [
+        "dopamine",
+        "modulator",
+        "n15"
+      ],
+      "explainer": {
+        "what": "This neuron symbolizes a modulatory dopaminergic influence over hubs.",
+        "how": "It scales downstream responses instead of acting as binary excitation alone.",
+        "where": "It sits above the main hub lane with broad projections.",
+        "why": "It helps separate modulation from direct feedforward signaling."
+      }
+    },
+    {
+      "id": "N16",
+      "label": "Cholinergic Modulator",
+      "region": "Modulatory lane",
+      "layer": 2,
+      "position": [
+        0.105,
+        -0.05,
+        -1.045
+      ],
+      "class": "modulatory",
+      "aliases": [
+        "acetylcholine",
+        "cholinergic",
+        "n16"
+      ],
+      "explainer": {
+        "what": "This neuron represents cholinergic contextual enhancement of selected pathways.",
+        "how": "It increases transmission gain in task-relevant edges.",
+        "where": "It is placed below the main hub corridor in layer two.",
+        "why": "It demonstrates selective amplification rather than global excitation."
+      }
+    },
+    {
+      "id": "N17",
+      "label": "Decision A",
+      "region": "Late integration",
+      "layer": 3,
+      "position": [
+        2.506,
+        0.16,
+        1.060
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "decision a",
+        "n17"
+      ],
+      "explainer": {
+        "what": "This late-stage neuron accumulates evidence for one output branch.",
+        "how": "It receives convergent drive from hubs and modulatory bias inputs.",
+        "where": "It lies in the upper output-prep layer.",
+        "why": "It visualizes commitment signals after mid-network integration."
+      }
+    },
+    {
+      "id": "N18",
+      "label": "Decision B",
+      "region": "Late integration",
+      "layer": 3,
+      "position": [
+        0.812,
+        -0.16,
+        -0.665
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "decision b",
+        "n18"
+      ],
+      "explainer": {
+        "what": "This neuron encodes an alternative decision trajectory.",
+        "how": "It competes with neighboring late-stage neurons through shared inhibitory control.",
+        "where": "It sits near the center of the late integration layer.",
+        "why": "Parallel decision units make competition and bias easy to interpret."
+      }
+    },
+    {
+      "id": "N19",
+      "label": "Decision C",
+      "region": "Late integration",
+      "layer": 3,
+      "position": [
+        0.917,
+        0.34,
+        2.561
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "decision c",
+        "n19"
+      ],
+      "explainer": {
+        "what": "This neuron is a lower-branch decision integrator.",
+        "how": "It combines hub input with serotonin-like contextual dampening.",
+        "where": "It appears in the lower middle of layer three.",
+        "why": "It shows how context can slow but stabilize signal escalation."
+      }
+    },
+    {
+      "id": "N20",
+      "label": "Decision D",
+      "region": "Late integration",
+      "layer": 3,
+      "position": [
+        -1.362,
+        0.00,
+        2.355
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "decision d",
+        "n20"
+      ],
+      "explainer": {
+        "what": "This neuron represents ventral route commitment to output channels.",
+        "how": "It forwards sustained but slower pulses to execution nodes.",
+        "where": "It occupies the ventral end of layer three.",
+        "why": "It highlights timing differences across pathway depth."
+      }
+    },
+    {
+      "id": "N21",
+      "label": "Serotonergic Regulator",
+      "region": "Modulatory lane",
+      "layer": 3,
+      "position": [
+        -2.616,
+        -0.24,
+        0.750
+      ],
+      "class": "modulatory",
+      "aliases": [
+        "serotonin",
+        "regulator",
+        "n21"
+      ],
+      "explainer": {
+        "what": "This neuron models serotonergic contextual regulation of output readiness.",
+        "how": "It tempers high-gain transitions and smooths downstream activation.",
+        "where": "It sits adjacent to decision nodes with broad modulatory projections.",
+        "why": "This makes stabilizing modulation visible in final-stage routing."
+      }
+    },
+    {
+      "id": "N22",
+      "label": "Inhibitory Clamp",
+      "region": "Interneuron gate",
+      "layer": 3,
+      "position": [
+        -1.901,
+        -0.1,
+        -1.946
+      ],
+      "class": "inhibitory",
+      "aliases": [
+        "clamp",
+        "inhibitory clamp",
+        "n22"
+      ],
+      "explainer": {
+        "what": "This interneuron clamps excessive late-stage spread.",
+        "how": "It applies broad inhibitory feedback onto decision and output targets.",
+        "where": "It is placed below the decision lane in layer three.",
+        "why": "A clamp unit makes global inhibitory regulation visually explicit."
+      }
+    },
+    {
+      "id": "N23",
+      "label": "Motor Output A",
+      "region": "Output",
+      "layer": 4,
+      "position": [
+        0.250,
+        -0.34,
+        -2.709
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "output a",
+        "motor a",
+        "n23"
+      ],
+      "explainer": {
+        "what": "This is a terminal output neuron for the upper execution path.",
+        "how": "It sums decision-layer drive and reflects final propagated signal intensity.",
+        "where": "It is located at the right edge of the network in the output layer.",
+        "why": "Output nodes provide a clear endpoint for educational signal tracing."
+      }
+    },
+    {
+      "id": "N24",
+      "label": "Motor Output B",
+      "region": "Output",
+      "layer": 4,
+      "position": [
+        2.205,
+        0.02,
+        -1.592
+      ],
+      "class": "excitatory",
+      "aliases": [
+        "output b",
+        "motor b",
+        "n24"
+      ],
+      "explainer": {
+        "what": "This is the terminal output neuron for the lower execution path.",
+        "how": "It receives convergent late-stage signals and inhibitory balancing input.",
+        "where": "It sits beside N23 at the final network layer.",
+        "why": "A paired endpoint makes branch outcomes easy to compare at a glance."
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "E01",
+      "from": "N01",
+      "to": "N05",
+      "weight": 0.92,
+      "type": "excitatory"
+    },
+    {
+      "id": "E02",
+      "from": "N01",
+      "to": "N06",
+      "weight": 0.68,
+      "type": "excitatory"
+    },
+    {
+      "id": "E03",
+      "from": "N02",
+      "to": "N06",
+      "weight": 0.84,
+      "type": "excitatory"
+    },
+    {
+      "id": "E04",
+      "from": "N02",
+      "to": "N07",
+      "weight": 0.66,
+      "type": "excitatory"
+    },
+    {
+      "id": "E05",
+      "from": "N03",
+      "to": "N07",
+      "weight": 0.81,
+      "type": "excitatory"
+    },
+    {
+      "id": "E06",
+      "from": "N03",
+      "to": "N08",
+      "weight": 0.73,
+      "type": "excitatory"
+    },
+    {
+      "id": "E07",
+      "from": "N04",
+      "to": "N08",
+      "weight": 0.62,
+      "type": "modulatory"
+    },
+    {
+      "id": "E08",
+      "from": "N04",
+      "to": "N06",
+      "weight": 0.48,
+      "type": "modulatory"
+    },
+    {
+      "id": "E09",
+      "from": "N05",
+      "to": "N11",
+      "weight": 0.88,
+      "type": "excitatory"
+    },
+    {
+      "id": "E10",
+      "from": "N06",
+      "to": "N11",
+      "weight": 0.55,
+      "type": "excitatory"
+    },
+    {
+      "id": "E11",
+      "from": "N06",
+      "to": "N12",
+      "weight": 0.83,
+      "type": "excitatory"
+    },
+    {
+      "id": "E12",
+      "from": "N07",
+      "to": "N12",
+      "weight": 0.78,
+      "type": "excitatory"
+    },
+    {
+      "id": "E13",
+      "from": "N07",
+      "to": "N13",
+      "weight": 0.76,
+      "type": "excitatory"
+    },
+    {
+      "id": "E14",
+      "from": "N08",
+      "to": "N13",
+      "weight": 0.71,
+      "type": "excitatory"
+    },
+    {
+      "id": "E15",
+      "from": "N08",
+      "to": "N14",
+      "weight": 0.80,
+      "type": "excitatory"
+    },
+    {
+      "id": "E16",
+      "from": "N09",
+      "to": "N12",
+      "weight": 0.64,
+      "type": "inhibitory"
+    },
+    {
+      "id": "E17",
+      "from": "N09",
+      "to": "N13",
+      "weight": 0.49,
+      "type": "inhibitory"
+    },
+    {
+      "id": "E18",
+      "from": "N10",
+      "to": "N11",
+      "weight": 0.56,
+      "type": "inhibitory"
+    },
+    {
+      "id": "E19",
+      "from": "N10",
+      "to": "N14",
+      "weight": 0.61,
+      "type": "inhibitory"
+    },
+    {
+      "id": "E20",
+      "from": "N05",
+      "to": "N09",
+      "weight": 0.52,
+      "type": "excitatory"
+    },
+    {
+      "id": "E21",
+      "from": "N08",
+      "to": "N10",
+      "weight": 0.57,
+      "type": "excitatory"
+    },
+    {
+      "id": "E22",
+      "from": "N11",
+      "to": "N17",
+      "weight": 0.87,
+      "type": "excitatory"
+    },
+    {
+      "id": "E23",
+      "from": "N12",
+      "to": "N17",
+      "weight": 0.58,
+      "type": "excitatory"
+    },
+    {
+      "id": "E24",
+      "from": "N12",
+      "to": "N18",
+      "weight": 0.84,
+      "type": "excitatory"
+    },
+    {
+      "id": "E25",
+      "from": "N13",
+      "to": "N18",
+      "weight": 0.61,
+      "type": "excitatory"
+    },
+    {
+      "id": "E26",
+      "from": "N13",
+      "to": "N19",
+      "weight": 0.82,
+      "type": "excitatory"
+    },
+    {
+      "id": "E27",
+      "from": "N14",
+      "to": "N19",
+      "weight": 0.64,
+      "type": "excitatory"
+    },
+    {
+      "id": "E28",
+      "from": "N14",
+      "to": "N20",
+      "weight": 0.86,
+      "type": "excitatory"
+    },
+    {
+      "id": "E29",
+      "from": "N15",
+      "to": "N11",
+      "weight": 0.44,
+      "type": "modulatory"
+    },
+    {
+      "id": "E30",
+      "from": "N15",
+      "to": "N12",
+      "weight": 0.46,
+      "type": "modulatory"
+    },
+    {
+      "id": "E31",
+      "from": "N15",
+      "to": "N17",
+      "weight": 0.41,
+      "type": "modulatory"
+    },
+    {
+      "id": "E32",
+      "from": "N16",
+      "to": "N13",
+      "weight": 0.47,
+      "type": "modulatory"
+    },
+    {
+      "id": "E33",
+      "from": "N16",
+      "to": "N14",
+      "weight": 0.51,
+      "type": "modulatory"
+    },
+    {
+      "id": "E34",
+      "from": "N16",
+      "to": "N19",
+      "weight": 0.43,
+      "type": "modulatory"
+    },
+    {
+      "id": "E35",
+      "from": "N17",
+      "to": "N23",
+      "weight": 0.90,
+      "type": "excitatory"
+    },
+    {
+      "id": "E36",
+      "from": "N18",
+      "to": "N23",
+      "weight": 0.70,
+      "type": "excitatory"
+    },
+    {
+      "id": "E37",
+      "from": "N18",
+      "to": "N24",
+      "weight": 0.52,
+      "type": "excitatory"
+    },
+    {
+      "id": "E38",
+      "from": "N19",
+      "to": "N24",
+      "weight": 0.88,
+      "type": "excitatory"
+    },
+    {
+      "id": "E39",
+      "from": "N20",
+      "to": "N24",
+      "weight": 0.74,
+      "type": "excitatory"
+    },
+    {
+      "id": "E40",
+      "from": "N20",
+      "to": "N23",
+      "weight": 0.40,
+      "type": "excitatory"
+    },
+    {
+      "id": "E41",
+      "from": "N21",
+      "to": "N18",
+      "weight": 0.45,
+      "type": "modulatory"
+    },
+    {
+      "id": "E42",
+      "from": "N21",
+      "to": "N19",
+      "weight": 0.46,
+      "type": "modulatory"
+    },
+    {
+      "id": "E43",
+      "from": "N22",
+      "to": "N17",
+      "weight": 0.59,
+      "type": "inhibitory"
+    },
+    {
+      "id": "E44",
+      "from": "N22",
+      "to": "N20",
+      "weight": 0.63,
+      "type": "inhibitory"
+    },
+    {
+      "id": "E45",
+      "from": "N22",
+      "to": "N24",
+      "weight": 0.54,
+      "type": "inhibitory"
+    }
+  ]
+}

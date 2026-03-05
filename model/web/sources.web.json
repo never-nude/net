@@ -1,0 +1,35 @@
+{
+  "source_name": "sources.web.json",
+  "tier": "Deterministic educational neuron web model",
+  "evidence": "Canonical cell signaling and cortical microcircuit principles synthesized for instructional visualization.",
+  "mechanism": "Directed weighted radial web with excitatory, inhibitory, and modulatory edges under neurotransmitter mode-dependent transforms.",
+  "datasets": [
+    "topology.web.json",
+    "scenarios.web.json",
+    "neurotransmitters.web.json"
+  ],
+  "citations": [
+    "Bean BP (2007) Nat Rev Neurosci",
+    "Kole MHP and Stuart GJ (2012) Neuron",
+    "Sudhof TC (2013) Neuron",
+    "London M and Hausser M (2005) Annu Rev Neurosci"
+  ],
+  "links": [
+    {
+      "label": "Bean 2007",
+      "href": "https://doi.org/10.1038/nrn2148"
+    },
+    {
+      "label": "Kole and Stuart 2012",
+      "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+    },
+    {
+      "label": "Sudhof 2013",
+      "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+    },
+    {
+      "label": "London and Hausser 2005",
+      "href": "https://doi.org/10.1146/annurev.neuro.28.061604.135703"
+    }
+  ]
+}

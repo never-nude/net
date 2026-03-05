@@ -1,0 +1,7181 @@
+{
+  "source_name": "scenarios.web.json",
+  "scenarios": [
+    {
+      "id": "visual_flash",
+      "label": "Visual flash",
+      "summary": "Brief high-salience visual onset drives rapid feedforward relay activation.",
+      "duration_s": 14.2,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.2,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.0,
+          "title": "Input onset",
+          "narration": "Visual flash onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.6,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.8,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.2,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.8,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 12.2,
+          "title": "Stabilization",
+          "narration": "Visual flash stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.0,
+          "end": 1.6,
+          "strength": 1.15
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.08,
+          "end": 1.7,
+          "strength": 1.092
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.2,
+          "end": 1.82,
+          "strength": 0.874
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.3,
+          "end": 1.95,
+          "strength": 0.805
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.44,
+          "end": 2.05,
+          "strength": 0.989
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.55,
+          "end": 2.18,
+          "strength": 0.943
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.76,
+          "end": 2.55,
+          "strength": 0.612
+        },
+        {
+          "edge_id": "E08",
+          "start": 1.9,
+          "end": 2.68,
+          "strength": 0.486
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.4,
+          "end": 3.2,
+          "strength": 1.127
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.55,
+          "end": 3.3,
+          "strength": 1.012
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.62,
+          "end": 3.42,
+          "strength": 0.92
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.78,
+          "end": 3.56,
+          "strength": 0.954
+        },
+        {
+          "edge_id": "E15",
+          "start": 2.94,
+          "end": 3.76,
+          "strength": 0.966
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.88,
+          "end": 3.56,
+          "strength": 0.782
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.02,
+          "end": 3.72,
+          "strength": 0.805
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.38,
+          "end": 4.16,
+          "strength": 0.627
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.54,
+          "end": 4.28,
+          "strength": 0.57
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.72,
+          "end": 4.48,
+          "strength": 0.608
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.4,
+          "end": 5.32,
+          "strength": 1.15
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.64,
+          "end": 5.5,
+          "strength": 1.058
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.9,
+          "end": 5.78,
+          "strength": 1.035
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.16,
+          "end": 6.08,
+          "strength": 1.069
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.24,
+          "end": 6.18,
+          "strength": 0.468
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.42,
+          "end": 6.34,
+          "strength": 0.495
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.24,
+          "end": 7.2,
+          "strength": 0.414
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.42,
+          "end": 7.3,
+          "strength": 0.432
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.6,
+          "end": 7.64,
+          "strength": 0.396
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.92,
+          "end": 7.88,
+          "strength": 0.589
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.82,
+          "end": 8.86,
+          "strength": 1.15
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.0,
+          "end": 9.02,
+          "strength": 0.943
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.24,
+          "end": 9.24,
+          "strength": 1.092
+        },
+        {
+          "edge_id": "E39",
+          "start": 8.46,
+          "end": 9.46,
+          "strength": 0.92
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.72,
+          "end": 9.68,
+          "strength": 0.513
+        },
+        {
+          "edge_id": "E40",
+          "start": 10.4,
+          "end": 11.3,
+          "strength": 0.506
+        },
+        {
+          "edge_id": "E37",
+          "start": 10.66,
+          "end": 11.5,
+          "strength": 0.667
+        },
+        {
+          "edge_id": "E42",
+          "start": 11.1,
+          "end": 12.0,
+          "strength": 0.378
+        },
+        {
+          "edge_id": "E44",
+          "start": 11.36,
+          "end": 12.3,
+          "strength": 0.57
+        }
+      ]
+    },
+    {
+      "id": "moving_object",
+      "label": "Moving object",
+      "summary": "Sustained visual-motion cue creates extended relay-to-hub transmission.",
+      "duration_s": 15.32,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.42,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.28,
+          "title": "Input onset",
+          "narration": "Moving object onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.01,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.38,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.98,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 10.78,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 13.38,
+          "title": "Stabilization",
+          "narration": "Moving object stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.28,
+          "end": 1.928,
+          "strength": 1.05
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.366,
+          "end": 2.036,
+          "strength": 0.997
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.496,
+          "end": 2.166,
+          "strength": 0.798
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.604,
+          "end": 2.306,
+          "strength": 0.735
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.755,
+          "end": 2.414,
+          "strength": 0.903
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.874,
+          "end": 2.554,
+          "strength": 0.861
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.101,
+          "end": 2.954,
+          "strength": 0.646
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.252,
+          "end": 3.094,
+          "strength": 0.513
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.792,
+          "end": 3.656,
+          "strength": 1.029
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.954,
+          "end": 3.764,
+          "strength": 0.924
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.03,
+          "end": 3.894,
+          "strength": 0.84
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.202,
+          "end": 4.045,
+          "strength": 0.871
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.375,
+          "end": 4.261,
+          "strength": 0.882
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.31,
+          "end": 4.045,
+          "strength": 0.714
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.462,
+          "end": 4.218,
+          "strength": 0.735
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.85,
+          "end": 4.693,
+          "strength": 0.66
+        },
+        {
+          "edge_id": "E18",
+          "start": 4.023,
+          "end": 4.822,
+          "strength": 0.6
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.218,
+          "end": 5.038,
+          "strength": 0.64
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.952,
+          "end": 5.946,
+          "strength": 1.05
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.211,
+          "end": 6.14,
+          "strength": 0.966
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.492,
+          "end": 6.442,
+          "strength": 0.945
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.773,
+          "end": 6.766,
+          "strength": 0.977
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.859,
+          "end": 6.874,
+          "strength": 0.494
+        },
+        {
+          "edge_id": "E32",
+          "start": 6.054,
+          "end": 7.047,
+          "strength": 0.522
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.939,
+          "end": 7.976,
+          "strength": 0.437
+        },
+        {
+          "edge_id": "E34",
+          "start": 7.134,
+          "end": 8.084,
+          "strength": 0.456
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.328,
+          "end": 8.451,
+          "strength": 0.418
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.674,
+          "end": 8.71,
+          "strength": 0.62
+        },
+        {
+          "edge_id": "E35",
+          "start": 8.646,
+          "end": 9.769,
+          "strength": 1.05
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.84,
+          "end": 9.942,
+          "strength": 0.861
+        },
+        {
+          "edge_id": "E38",
+          "start": 9.099,
+          "end": 10.179,
+          "strength": 0.997
+        },
+        {
+          "edge_id": "E39",
+          "start": 9.337,
+          "end": 10.417,
+          "strength": 0.84
+        },
+        {
+          "edge_id": "E45",
+          "start": 9.618,
+          "end": 10.654,
+          "strength": 0.54
+        },
+        {
+          "edge_id": "E40",
+          "start": 11.432,
+          "end": 12.404,
+          "strength": 0.462
+        },
+        {
+          "edge_id": "E37",
+          "start": 11.713,
+          "end": 12.62,
+          "strength": 0.609
+        },
+        {
+          "edge_id": "E42",
+          "start": 12.188,
+          "end": 13.16,
+          "strength": 0.399
+        },
+        {
+          "edge_id": "E44",
+          "start": 12.469,
+          "end": 13.484,
+          "strength": 0.6
+        }
+      ]
+    },
+    {
+      "id": "loud_sound",
+      "label": "Loud sound",
+      "summary": "Acute auditory input causes fast convergence with stronger inhibitory shaping.",
+      "duration_s": 13.64,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.29,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.06,
+          "title": "Input onset",
+          "narration": "Loud sound onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.6,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.71,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.01,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.51,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 11.81,
+          "title": "Stabilization",
+          "narration": "Loud sound stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.06,
+          "end": 1.636,
+          "strength": 1.08
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.137,
+          "end": 1.732,
+          "strength": 1.026
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.252,
+          "end": 1.847,
+          "strength": 0.821
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.348,
+          "end": 1.972,
+          "strength": 0.756
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.482,
+          "end": 2.068,
+          "strength": 0.929
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.588,
+          "end": 2.193,
+          "strength": 0.886
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.79,
+          "end": 2.548,
+          "strength": 0.598
+        },
+        {
+          "edge_id": "E08",
+          "start": 1.924,
+          "end": 2.673,
+          "strength": 0.475
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.404,
+          "end": 3.172,
+          "strength": 1.058
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.548,
+          "end": 3.268,
+          "strength": 0.95
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.615,
+          "end": 3.383,
+          "strength": 0.864
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.769,
+          "end": 3.518,
+          "strength": 0.896
+        },
+        {
+          "edge_id": "E15",
+          "start": 2.922,
+          "end": 3.71,
+          "strength": 0.907
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.865,
+          "end": 3.518,
+          "strength": 0.734
+        },
+        {
+          "edge_id": "E21",
+          "start": 2.999,
+          "end": 3.671,
+          "strength": 0.756
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.345,
+          "end": 4.094,
+          "strength": 0.779
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.498,
+          "end": 4.209,
+          "strength": 0.708
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.671,
+          "end": 4.401,
+          "strength": 0.755
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.324,
+          "end": 5.207,
+          "strength": 1.08
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.554,
+          "end": 5.38,
+          "strength": 0.994
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.804,
+          "end": 5.649,
+          "strength": 0.972
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.054,
+          "end": 5.937,
+          "strength": 1.004
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.13,
+          "end": 6.033,
+          "strength": 0.458
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.303,
+          "end": 6.186,
+          "strength": 0.484
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.09,
+          "end": 7.012,
+          "strength": 0.405
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.263,
+          "end": 7.108,
+          "strength": 0.422
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.436,
+          "end": 7.434,
+          "strength": 0.387
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.743,
+          "end": 7.665,
+          "strength": 0.732
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.607,
+          "end": 8.606,
+          "strength": 1.08
+        },
+        {
+          "edge_id": "E36",
+          "start": 7.78,
+          "end": 8.759,
+          "strength": 0.886
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.01,
+          "end": 8.97,
+          "strength": 1.026
+        },
+        {
+          "edge_id": "E39",
+          "start": 8.222,
+          "end": 9.182,
+          "strength": 0.864
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.471,
+          "end": 9.393,
+          "strength": 0.637
+        },
+        {
+          "edge_id": "E40",
+          "start": 10.084,
+          "end": 10.948,
+          "strength": 0.475
+        },
+        {
+          "edge_id": "E37",
+          "start": 10.334,
+          "end": 11.14,
+          "strength": 0.626
+        },
+        {
+          "edge_id": "E42",
+          "start": 10.756,
+          "end": 11.62,
+          "strength": 0.37
+        },
+        {
+          "edge_id": "E44",
+          "start": 11.006,
+          "end": 11.908,
+          "strength": 0.708
+        }
+      ]
+    },
+    {
+      "id": "spoken_word",
+      "label": "Spoken word",
+      "summary": "Structured auditory sequence recruits balanced feedforward and contextual routing.",
+      "duration_s": 14.48,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.5,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.32,
+          "title": "Input onset",
+          "narration": "Spoken word onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.95,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.2,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.64,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 10.3,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 12.74,
+          "title": "Stabilization",
+          "narration": "Spoken word stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.32,
+          "end": 1.932,
+          "strength": 0.98
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.402,
+          "end": 2.034,
+          "strength": 0.931
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.524,
+          "end": 2.156,
+          "strength": 0.745
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.626,
+          "end": 2.289,
+          "strength": 0.686
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.769,
+          "end": 2.391,
+          "strength": 0.843
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.881,
+          "end": 2.524,
+          "strength": 0.804
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.095,
+          "end": 2.901,
+          "strength": 0.694
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.238,
+          "end": 3.034,
+          "strength": 0.551
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.748,
+          "end": 3.564,
+          "strength": 0.96
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.901,
+          "end": 3.666,
+          "strength": 0.862
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.972,
+          "end": 3.788,
+          "strength": 0.784
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.136,
+          "end": 3.931,
+          "strength": 0.813
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.299,
+          "end": 4.135,
+          "strength": 0.823
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.238,
+          "end": 3.931,
+          "strength": 0.666
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.38,
+          "end": 4.094,
+          "strength": 0.686
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.748,
+          "end": 4.543,
+          "strength": 0.673
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.911,
+          "end": 4.666,
+          "strength": 0.612
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.094,
+          "end": 4.87,
+          "strength": 0.653
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.788,
+          "end": 5.726,
+          "strength": 0.98
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.033,
+          "end": 5.91,
+          "strength": 0.902
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.298,
+          "end": 6.196,
+          "strength": 0.882
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.563,
+          "end": 6.502,
+          "strength": 0.911
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.645,
+          "end": 6.604,
+          "strength": 0.53
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.828,
+          "end": 6.767,
+          "strength": 0.561
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.665,
+          "end": 7.644,
+          "strength": 0.469
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.848,
+          "end": 7.746,
+          "strength": 0.49
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.032,
+          "end": 8.093,
+          "strength": 0.449
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.358,
+          "end": 8.338,
+          "strength": 0.632
+        },
+        {
+          "edge_id": "E35",
+          "start": 8.276,
+          "end": 9.337,
+          "strength": 0.98
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.46,
+          "end": 9.5,
+          "strength": 0.804
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.705,
+          "end": 9.725,
+          "strength": 0.931
+        },
+        {
+          "edge_id": "E39",
+          "start": 8.929,
+          "end": 9.949,
+          "strength": 0.784
+        },
+        {
+          "edge_id": "E45",
+          "start": 9.194,
+          "end": 10.174,
+          "strength": 0.551
+        },
+        {
+          "edge_id": "E40",
+          "start": 10.908,
+          "end": 11.826,
+          "strength": 0.431
+        },
+        {
+          "edge_id": "E37",
+          "start": 11.173,
+          "end": 12.03,
+          "strength": 0.568
+        },
+        {
+          "edge_id": "E42",
+          "start": 11.622,
+          "end": 12.54,
+          "strength": 0.428
+        },
+        {
+          "edge_id": "E44",
+          "start": 11.887,
+          "end": 12.846,
+          "strength": 0.612
+        }
+      ]
+    },
+    {
+      "id": "music_beat",
+      "label": "Music beat",
+      "summary": "Rhythmic cue produces pulsed relay entrainment across both branches.",
+      "duration_s": 15.88,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.37,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.27,
+          "title": "Input onset",
+          "narration": "Music beat onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.06,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.53,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 8.21,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 11.13,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 13.81,
+          "title": "Stabilization",
+          "narration": "Music beat stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.27,
+          "end": 1.942,
+          "strength": 0.94
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.36,
+          "end": 2.054,
+          "strength": 0.893
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.494,
+          "end": 2.188,
+          "strength": 0.714
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.606,
+          "end": 2.334,
+          "strength": 0.658
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.763,
+          "end": 2.446,
+          "strength": 0.808
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.886,
+          "end": 2.592,
+          "strength": 0.771
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.121,
+          "end": 3.006,
+          "strength": 0.734
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.278,
+          "end": 3.152,
+          "strength": 0.583
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.838,
+          "end": 3.734,
+          "strength": 0.921
+        },
+        {
+          "edge_id": "E11",
+          "start": 3.006,
+          "end": 3.846,
+          "strength": 0.827
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.084,
+          "end": 3.98,
+          "strength": 0.752
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.264,
+          "end": 4.137,
+          "strength": 0.78
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.443,
+          "end": 4.361,
+          "strength": 0.79
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.376,
+          "end": 4.137,
+          "strength": 0.639
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.532,
+          "end": 4.316,
+          "strength": 0.658
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.936,
+          "end": 4.809,
+          "strength": 0.7
+        },
+        {
+          "edge_id": "E18",
+          "start": 4.115,
+          "end": 4.944,
+          "strength": 0.636
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.316,
+          "end": 5.168,
+          "strength": 0.678
+        },
+        {
+          "edge_id": "E22",
+          "start": 5.078,
+          "end": 6.108,
+          "strength": 0.94
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.347,
+          "end": 6.31,
+          "strength": 0.865
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.638,
+          "end": 6.624,
+          "strength": 0.846
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.929,
+          "end": 6.96,
+          "strength": 0.874
+        },
+        {
+          "edge_id": "E29",
+          "start": 6.019,
+          "end": 7.072,
+          "strength": 0.562
+        },
+        {
+          "edge_id": "E32",
+          "start": 6.22,
+          "end": 7.251,
+          "strength": 0.594
+        },
+        {
+          "edge_id": "E31",
+          "start": 7.139,
+          "end": 8.214,
+          "strength": 0.497
+        },
+        {
+          "edge_id": "E34",
+          "start": 7.34,
+          "end": 8.326,
+          "strength": 0.518
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.542,
+          "end": 8.707,
+          "strength": 0.475
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.9,
+          "end": 8.976,
+          "strength": 0.657
+        },
+        {
+          "edge_id": "E35",
+          "start": 8.908,
+          "end": 10.073,
+          "strength": 0.94
+        },
+        {
+          "edge_id": "E36",
+          "start": 9.11,
+          "end": 10.252,
+          "strength": 0.771
+        },
+        {
+          "edge_id": "E38",
+          "start": 9.379,
+          "end": 10.499,
+          "strength": 0.893
+        },
+        {
+          "edge_id": "E39",
+          "start": 9.625,
+          "end": 10.745,
+          "strength": 0.752
+        },
+        {
+          "edge_id": "E45",
+          "start": 9.916,
+          "end": 10.992,
+          "strength": 0.572
+        },
+        {
+          "edge_id": "E40",
+          "start": 11.798,
+          "end": 12.806,
+          "strength": 0.414
+        },
+        {
+          "edge_id": "E37",
+          "start": 12.089,
+          "end": 13.03,
+          "strength": 0.545
+        },
+        {
+          "edge_id": "E42",
+          "start": 12.582,
+          "end": 13.59,
+          "strength": 0.454
+        },
+        {
+          "edge_id": "E44",
+          "start": 12.873,
+          "end": 13.926,
+          "strength": 0.636
+        }
+      ]
+    },
+    {
+      "id": "name_call",
+      "label": "Name call",
+      "summary": "Self-relevant cue boosts modulatory lanes and decision-node gain.",
+      "duration_s": 14.2,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.25,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.05,
+          "title": "Input onset",
+          "narration": "Name call onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.65,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.85,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.25,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.85,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 12.25,
+          "title": "Stabilization",
+          "narration": "Name call stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.05,
+          "end": 1.65,
+          "strength": 1.0
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.13,
+          "end": 1.75,
+          "strength": 0.95
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.25,
+          "end": 1.87,
+          "strength": 0.76
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.35,
+          "end": 2.0,
+          "strength": 0.7
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.49,
+          "end": 2.1,
+          "strength": 0.86
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.6,
+          "end": 2.23,
+          "strength": 0.82
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.81,
+          "end": 2.6,
+          "strength": 0.83
+        },
+        {
+          "edge_id": "E08",
+          "start": 1.95,
+          "end": 2.73,
+          "strength": 0.659
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.45,
+          "end": 3.25,
+          "strength": 0.98
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.6,
+          "end": 3.35,
+          "strength": 0.88
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.67,
+          "end": 3.47,
+          "strength": 0.8
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.83,
+          "end": 3.61,
+          "strength": 0.83
+        },
+        {
+          "edge_id": "E15",
+          "start": 2.99,
+          "end": 3.81,
+          "strength": 0.84
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.93,
+          "end": 3.61,
+          "strength": 0.68
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.07,
+          "end": 3.77,
+          "strength": 0.7
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.43,
+          "end": 4.21,
+          "strength": 0.647
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.59,
+          "end": 4.33,
+          "strength": 0.588
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.77,
+          "end": 4.53,
+          "strength": 0.627
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.45,
+          "end": 5.37,
+          "strength": 1.0
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.69,
+          "end": 5.55,
+          "strength": 0.92
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.95,
+          "end": 5.83,
+          "strength": 0.9
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.21,
+          "end": 6.13,
+          "strength": 0.93
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.29,
+          "end": 6.23,
+          "strength": 0.634
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.47,
+          "end": 6.39,
+          "strength": 0.671
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.29,
+          "end": 7.25,
+          "strength": 0.561
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.47,
+          "end": 7.35,
+          "strength": 0.586
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.65,
+          "end": 7.69,
+          "strength": 0.537
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.97,
+          "end": 7.93,
+          "strength": 0.608
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.87,
+          "end": 8.91,
+          "strength": 1.0
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.05,
+          "end": 9.07,
+          "strength": 0.82
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.29,
+          "end": 9.29,
+          "strength": 0.95
+        },
+        {
+          "edge_id": "E39",
+          "start": 8.51,
+          "end": 9.51,
+          "strength": 0.8
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.77,
+          "end": 9.73,
+          "strength": 0.529
+        },
+        {
+          "edge_id": "E40",
+          "start": 10.45,
+          "end": 11.35,
+          "strength": 0.44
+        },
+        {
+          "edge_id": "E37",
+          "start": 10.71,
+          "end": 11.55,
+          "strength": 0.58
+        },
+        {
+          "edge_id": "E42",
+          "start": 11.15,
+          "end": 12.05,
+          "strength": 0.512
+        },
+        {
+          "edge_id": "E44",
+          "start": 11.41,
+          "end": 12.35,
+          "strength": 0.588
+        }
+      ]
+    },
+    {
+      "id": "light_touch",
+      "label": "Light touch",
+      "summary": "Low-intensity tactile input propagates with moderate amplitude and clean timing.",
+      "duration_s": 14.9,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.49,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.33,
+          "title": "Input onset",
+          "narration": "Light touch onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.01,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.32,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.84,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 10.57,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 13.09,
+          "title": "Stabilization",
+          "narration": "Light touch stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.33,
+          "end": 1.96,
+          "strength": 0.9
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.414,
+          "end": 2.065,
+          "strength": 0.855
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.54,
+          "end": 2.191,
+          "strength": 0.684
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.645,
+          "end": 2.327,
+          "strength": 0.63
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.792,
+          "end": 2.433,
+          "strength": 0.774
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.908,
+          "end": 2.569,
+          "strength": 0.738
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.128,
+          "end": 2.957,
+          "strength": 0.68
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.275,
+          "end": 3.094,
+          "strength": 0.54
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.8,
+          "end": 3.64,
+          "strength": 0.882
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.957,
+          "end": 3.745,
+          "strength": 0.792
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.031,
+          "end": 3.871,
+          "strength": 0.72
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.199,
+          "end": 4.018,
+          "strength": 0.747
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.367,
+          "end": 4.228,
+          "strength": 0.756
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.304,
+          "end": 4.018,
+          "strength": 0.612
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.451,
+          "end": 4.186,
+          "strength": 0.63
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.829,
+          "end": 4.648,
+          "strength": 0.634
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.997,
+          "end": 4.774,
+          "strength": 0.576
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.186,
+          "end": 4.984,
+          "strength": 0.614
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.9,
+          "end": 5.866,
+          "strength": 0.9
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.152,
+          "end": 6.055,
+          "strength": 0.828
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.425,
+          "end": 6.349,
+          "strength": 0.81
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.698,
+          "end": 6.664,
+          "strength": 0.837
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.782,
+          "end": 6.769,
+          "strength": 0.52
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.971,
+          "end": 6.937,
+          "strength": 0.55
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.832,
+          "end": 7.84,
+          "strength": 0.46
+        },
+        {
+          "edge_id": "E34",
+          "start": 7.021,
+          "end": 7.945,
+          "strength": 0.48
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.21,
+          "end": 8.302,
+          "strength": 0.44
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.546,
+          "end": 8.554,
+          "strength": 0.595
+        },
+        {
+          "edge_id": "E35",
+          "start": 8.491,
+          "end": 9.583,
+          "strength": 0.9
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.68,
+          "end": 9.751,
+          "strength": 0.738
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.932,
+          "end": 9.982,
+          "strength": 0.855
+        },
+        {
+          "edge_id": "E39",
+          "start": 9.163,
+          "end": 10.213,
+          "strength": 0.72
+        },
+        {
+          "edge_id": "E45",
+          "start": 9.436,
+          "end": 10.444,
+          "strength": 0.518
+        },
+        {
+          "edge_id": "E40",
+          "start": 11.2,
+          "end": 12.145,
+          "strength": 0.396
+        },
+        {
+          "edge_id": "E37",
+          "start": 11.473,
+          "end": 12.355,
+          "strength": 0.522
+        },
+        {
+          "edge_id": "E42",
+          "start": 11.935,
+          "end": 12.88,
+          "strength": 0.42
+        },
+        {
+          "edge_id": "E44",
+          "start": 12.208,
+          "end": 13.195,
+          "strength": 0.576
+        }
+      ]
+    },
+    {
+      "id": "pain_signal",
+      "label": "Pain signal",
+      "summary": "Nociceptive-like drive strongly recruits inhibitory clamps to limit spread.",
+      "duration_s": 13.36,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.19,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 0.94,
+          "title": "Input onset",
+          "narration": "Pain signal onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.44,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.51,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 6.77,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.21,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 11.47,
+          "title": "Stabilization",
+          "narration": "Pain signal stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 0.94,
+          "end": 1.504,
+          "strength": 1.18
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.015,
+          "end": 1.598,
+          "strength": 1.121
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.128,
+          "end": 1.711,
+          "strength": 0.897
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.222,
+          "end": 1.833,
+          "strength": 0.826
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.354,
+          "end": 1.927,
+          "strength": 1.015
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.457,
+          "end": 2.049,
+          "strength": 0.968
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.654,
+          "end": 2.397,
+          "strength": 0.626
+        },
+        {
+          "edge_id": "E08",
+          "start": 1.786,
+          "end": 2.519,
+          "strength": 0.497
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.256,
+          "end": 3.008,
+          "strength": 1.156
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.397,
+          "end": 3.102,
+          "strength": 1.038
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.463,
+          "end": 3.215,
+          "strength": 0.944
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.613,
+          "end": 3.346,
+          "strength": 0.979
+        },
+        {
+          "edge_id": "E15",
+          "start": 2.764,
+          "end": 3.534,
+          "strength": 0.991
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.707,
+          "end": 3.346,
+          "strength": 0.802
+        },
+        {
+          "edge_id": "E21",
+          "start": 2.839,
+          "end": 3.497,
+          "strength": 0.826
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.177,
+          "end": 3.91,
+          "strength": 0.845
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.328,
+          "end": 4.023,
+          "strength": 0.768
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.497,
+          "end": 4.211,
+          "strength": 0.819
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.136,
+          "end": 5.001,
+          "strength": 1.18
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.362,
+          "end": 5.17,
+          "strength": 1.086
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.606,
+          "end": 5.433,
+          "strength": 1.062
+        },
+        {
+          "edge_id": "E28",
+          "start": 4.85,
+          "end": 5.715,
+          "strength": 1.097
+        },
+        {
+          "edge_id": "E29",
+          "start": 4.926,
+          "end": 5.809,
+          "strength": 0.478
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.095,
+          "end": 5.96,
+          "strength": 0.506
+        },
+        {
+          "edge_id": "E31",
+          "start": 5.866,
+          "end": 6.768,
+          "strength": 0.423
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.035,
+          "end": 6.862,
+          "strength": 0.442
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.204,
+          "end": 7.182,
+          "strength": 0.405
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.505,
+          "end": 7.407,
+          "strength": 0.794
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.351,
+          "end": 8.328,
+          "strength": 1.18
+        },
+        {
+          "edge_id": "E36",
+          "start": 7.52,
+          "end": 8.479,
+          "strength": 0.968
+        },
+        {
+          "edge_id": "E38",
+          "start": 7.746,
+          "end": 8.686,
+          "strength": 1.121
+        },
+        {
+          "edge_id": "E39",
+          "start": 7.952,
+          "end": 8.892,
+          "strength": 0.944
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.197,
+          "end": 9.099,
+          "strength": 0.691
+        },
+        {
+          "edge_id": "E40",
+          "start": 9.776,
+          "end": 10.622,
+          "strength": 0.519
+        },
+        {
+          "edge_id": "E37",
+          "start": 10.02,
+          "end": 10.81,
+          "strength": 0.684
+        },
+        {
+          "edge_id": "E42",
+          "start": 10.434,
+          "end": 11.28,
+          "strength": 0.386
+        },
+        {
+          "edge_id": "E44",
+          "start": 10.678,
+          "end": 11.562,
+          "strength": 0.768
+        }
+      ]
+    },
+    {
+      "id": "warmth_signal",
+      "label": "Warmth signal",
+      "summary": "Thermal-warm context yields smooth, mid-speed propagation with modulatory support.",
+      "duration_s": 15.6,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.57,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.45,
+          "title": "Input onset",
+          "narration": "Warmth signal onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.21,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.63,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 8.27,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 11.13,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 13.77,
+          "title": "Stabilization",
+          "narration": "Warmth signal stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.45,
+          "end": 2.11,
+          "strength": 0.88
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.538,
+          "end": 2.22,
+          "strength": 0.836
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.67,
+          "end": 2.352,
+          "strength": 0.669
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.78,
+          "end": 2.495,
+          "strength": 0.616
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.934,
+          "end": 2.605,
+          "strength": 0.757
+        },
+        {
+          "edge_id": "E06",
+          "start": 2.055,
+          "end": 2.748,
+          "strength": 0.722
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.286,
+          "end": 3.155,
+          "strength": 0.775
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.44,
+          "end": 3.298,
+          "strength": 0.616
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.99,
+          "end": 3.87,
+          "strength": 0.862
+        },
+        {
+          "edge_id": "E11",
+          "start": 3.155,
+          "end": 3.98,
+          "strength": 0.774
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.232,
+          "end": 4.112,
+          "strength": 0.704
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.408,
+          "end": 4.266,
+          "strength": 0.73
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.584,
+          "end": 4.486,
+          "strength": 0.739
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.518,
+          "end": 4.266,
+          "strength": 0.598
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.672,
+          "end": 4.442,
+          "strength": 0.616
+        },
+        {
+          "edge_id": "E16",
+          "start": 4.068,
+          "end": 4.926,
+          "strength": 0.62
+        },
+        {
+          "edge_id": "E18",
+          "start": 4.244,
+          "end": 5.058,
+          "strength": 0.564
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.442,
+          "end": 5.278,
+          "strength": 0.602
+        },
+        {
+          "edge_id": "E22",
+          "start": 5.19,
+          "end": 6.202,
+          "strength": 0.88
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.454,
+          "end": 6.4,
+          "strength": 0.81
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.74,
+          "end": 6.708,
+          "strength": 0.792
+        },
+        {
+          "edge_id": "E28",
+          "start": 6.026,
+          "end": 7.038,
+          "strength": 0.818
+        },
+        {
+          "edge_id": "E29",
+          "start": 6.114,
+          "end": 7.148,
+          "strength": 0.593
+        },
+        {
+          "edge_id": "E32",
+          "start": 6.312,
+          "end": 7.324,
+          "strength": 0.627
+        },
+        {
+          "edge_id": "E31",
+          "start": 7.214,
+          "end": 8.27,
+          "strength": 0.524
+        },
+        {
+          "edge_id": "E34",
+          "start": 7.412,
+          "end": 8.38,
+          "strength": 0.547
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.61,
+          "end": 8.754,
+          "strength": 0.502
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.962,
+          "end": 9.018,
+          "strength": 0.583
+        },
+        {
+          "edge_id": "E35",
+          "start": 8.952,
+          "end": 10.096,
+          "strength": 0.88
+        },
+        {
+          "edge_id": "E36",
+          "start": 9.15,
+          "end": 10.272,
+          "strength": 0.722
+        },
+        {
+          "edge_id": "E38",
+          "start": 9.414,
+          "end": 10.514,
+          "strength": 0.836
+        },
+        {
+          "edge_id": "E39",
+          "start": 9.656,
+          "end": 10.756,
+          "strength": 0.704
+        },
+        {
+          "edge_id": "E45",
+          "start": 9.942,
+          "end": 10.998,
+          "strength": 0.508
+        },
+        {
+          "edge_id": "E40",
+          "start": 11.79,
+          "end": 12.78,
+          "strength": 0.387
+        },
+        {
+          "edge_id": "E37",
+          "start": 12.076,
+          "end": 13.0,
+          "strength": 0.51
+        },
+        {
+          "edge_id": "E42",
+          "start": 12.56,
+          "end": 13.55,
+          "strength": 0.479
+        },
+        {
+          "edge_id": "E44",
+          "start": 12.846,
+          "end": 13.88,
+          "strength": 0.564
+        }
+      ]
+    },
+    {
+      "id": "cold_signal",
+      "label": "Cold signal",
+      "summary": "Thermal-cold cue introduces slower onset with stronger late stabilization.",
+      "duration_s": 16.16,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.63,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.54,
+          "title": "Input onset",
+          "narration": "Cold signal onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.36,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.87,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 8.61,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 11.57,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 14.31,
+          "title": "Stabilization",
+          "narration": "Cold signal stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.54,
+          "end": 2.224,
+          "strength": 0.84
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.631,
+          "end": 2.338,
+          "strength": 0.798
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.768,
+          "end": 2.475,
+          "strength": 0.638
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.882,
+          "end": 2.623,
+          "strength": 0.588
+        },
+        {
+          "edge_id": "E05",
+          "start": 2.042,
+          "end": 2.737,
+          "strength": 0.722
+        },
+        {
+          "edge_id": "E06",
+          "start": 2.167,
+          "end": 2.885,
+          "strength": 0.689
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.406,
+          "end": 3.307,
+          "strength": 0.762
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.566,
+          "end": 3.455,
+          "strength": 0.605
+        },
+        {
+          "edge_id": "E09",
+          "start": 3.136,
+          "end": 4.048,
+          "strength": 0.823
+        },
+        {
+          "edge_id": "E11",
+          "start": 3.307,
+          "end": 4.162,
+          "strength": 0.739
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.387,
+          "end": 4.299,
+          "strength": 0.672
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.569,
+          "end": 4.458,
+          "strength": 0.697
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.752,
+          "end": 4.686,
+          "strength": 0.706
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.683,
+          "end": 4.458,
+          "strength": 0.571
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.843,
+          "end": 4.641,
+          "strength": 0.588
+        },
+        {
+          "edge_id": "E16",
+          "start": 4.253,
+          "end": 5.142,
+          "strength": 0.713
+        },
+        {
+          "edge_id": "E18",
+          "start": 4.436,
+          "end": 5.279,
+          "strength": 0.648
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.641,
+          "end": 5.507,
+          "strength": 0.691
+        },
+        {
+          "edge_id": "E22",
+          "start": 5.416,
+          "end": 6.465,
+          "strength": 0.84
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.69,
+          "end": 6.67,
+          "strength": 0.773
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.986,
+          "end": 6.989,
+          "strength": 0.756
+        },
+        {
+          "edge_id": "E28",
+          "start": 6.282,
+          "end": 7.331,
+          "strength": 0.781
+        },
+        {
+          "edge_id": "E29",
+          "start": 6.374,
+          "end": 7.445,
+          "strength": 0.582
+        },
+        {
+          "edge_id": "E32",
+          "start": 6.579,
+          "end": 7.628,
+          "strength": 0.616
+        },
+        {
+          "edge_id": "E31",
+          "start": 7.514,
+          "end": 8.608,
+          "strength": 0.515
+        },
+        {
+          "edge_id": "E34",
+          "start": 7.719,
+          "end": 8.722,
+          "strength": 0.538
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.924,
+          "end": 9.11,
+          "strength": 0.493
+        },
+        {
+          "edge_id": "E43",
+          "start": 8.289,
+          "end": 9.383,
+          "strength": 0.67
+        },
+        {
+          "edge_id": "E35",
+          "start": 9.315,
+          "end": 10.5,
+          "strength": 0.84
+        },
+        {
+          "edge_id": "E36",
+          "start": 9.52,
+          "end": 10.683,
+          "strength": 0.689
+        },
+        {
+          "edge_id": "E38",
+          "start": 9.794,
+          "end": 10.934,
+          "strength": 0.798
+        },
+        {
+          "edge_id": "E39",
+          "start": 10.044,
+          "end": 11.184,
+          "strength": 0.672
+        },
+        {
+          "edge_id": "E45",
+          "start": 10.341,
+          "end": 11.435,
+          "strength": 0.583
+        },
+        {
+          "edge_id": "E40",
+          "start": 12.256,
+          "end": 13.282,
+          "strength": 0.37
+        },
+        {
+          "edge_id": "E37",
+          "start": 12.552,
+          "end": 13.51,
+          "strength": 0.487
+        },
+        {
+          "edge_id": "E42",
+          "start": 13.054,
+          "end": 14.08,
+          "strength": 0.47
+        },
+        {
+          "edge_id": "E44",
+          "start": 13.35,
+          "end": 14.422,
+          "strength": 0.648
+        }
+      ]
+    },
+    {
+      "id": "sweet_taste",
+      "label": "Sweet taste",
+      "summary": "Reward-associated gustatory cue biases excitatory outputs via modulation.",
+      "duration_s": 14.48,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.4,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.22,
+          "title": "Input onset",
+          "narration": "Sweet taste onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.85,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.1,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.54,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 10.2,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 12.64,
+          "title": "Stabilization",
+          "narration": "Sweet taste stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.22,
+          "end": 1.832,
+          "strength": 1.06
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.302,
+          "end": 1.934,
+          "strength": 1.007
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.424,
+          "end": 2.056,
+          "strength": 0.806
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.526,
+          "end": 2.189,
+          "strength": 0.742
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.669,
+          "end": 2.291,
+          "strength": 0.912
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.781,
+          "end": 2.424,
+          "strength": 0.869
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.995,
+          "end": 2.801,
+          "strength": 0.85
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.138,
+          "end": 2.934,
+          "strength": 0.675
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.648,
+          "end": 3.464,
+          "strength": 1.039
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.801,
+          "end": 3.566,
+          "strength": 0.933
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.872,
+          "end": 3.688,
+          "strength": 0.848
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.036,
+          "end": 3.831,
+          "strength": 0.88
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.199,
+          "end": 4.035,
+          "strength": 0.89
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.138,
+          "end": 3.831,
+          "strength": 0.721
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.28,
+          "end": 3.994,
+          "strength": 0.742
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.648,
+          "end": 4.443,
+          "strength": 0.594
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.811,
+          "end": 4.566,
+          "strength": 0.54
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.994,
+          "end": 4.77,
+          "strength": 0.576
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.688,
+          "end": 5.626,
+          "strength": 1.06
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.933,
+          "end": 5.81,
+          "strength": 0.975
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.198,
+          "end": 6.096,
+          "strength": 0.954
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.463,
+          "end": 6.402,
+          "strength": 0.986
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.545,
+          "end": 6.504,
+          "strength": 0.65
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.728,
+          "end": 6.667,
+          "strength": 0.688
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.565,
+          "end": 7.544,
+          "strength": 0.575
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.748,
+          "end": 7.646,
+          "strength": 0.6
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.932,
+          "end": 7.993,
+          "strength": 0.55
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.258,
+          "end": 8.238,
+          "strength": 0.558
+        },
+        {
+          "edge_id": "E35",
+          "start": 8.176,
+          "end": 9.237,
+          "strength": 1.06
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.36,
+          "end": 9.4,
+          "strength": 0.869
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.605,
+          "end": 9.625,
+          "strength": 1.007
+        },
+        {
+          "edge_id": "E39",
+          "start": 8.829,
+          "end": 9.849,
+          "strength": 0.848
+        },
+        {
+          "edge_id": "E45",
+          "start": 9.094,
+          "end": 10.074,
+          "strength": 0.486
+        },
+        {
+          "edge_id": "E40",
+          "start": 10.808,
+          "end": 11.726,
+          "strength": 0.466
+        },
+        {
+          "edge_id": "E37",
+          "start": 11.073,
+          "end": 11.93,
+          "strength": 0.615
+        },
+        {
+          "edge_id": "E42",
+          "start": 11.522,
+          "end": 12.44,
+          "strength": 0.525
+        },
+        {
+          "edge_id": "E44",
+          "start": 11.787,
+          "end": 12.746,
+          "strength": 0.54
+        }
+      ]
+    },
+    {
+      "id": "bitter_taste",
+      "label": "Bitter taste",
+      "summary": "Aversive gustatory cue elevates inhibitory lane influence before output.",
+      "duration_s": 13.92,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.38,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.16,
+          "title": "Input onset",
+          "narration": "Bitter taste onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.73,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.88,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.24,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.78,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 12.14,
+          "title": "Stabilization",
+          "narration": "Bitter taste stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.16,
+          "end": 1.748,
+          "strength": 0.96
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.238,
+          "end": 1.846,
+          "strength": 0.912
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.356,
+          "end": 1.964,
+          "strength": 0.73
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.454,
+          "end": 2.091,
+          "strength": 0.672
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.591,
+          "end": 2.189,
+          "strength": 0.826
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.699,
+          "end": 2.316,
+          "strength": 0.787
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.905,
+          "end": 2.679,
+          "strength": 0.68
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.042,
+          "end": 2.806,
+          "strength": 0.54
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.532,
+          "end": 3.316,
+          "strength": 0.941
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.679,
+          "end": 3.414,
+          "strength": 0.845
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.748,
+          "end": 3.532,
+          "strength": 0.768
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.904,
+          "end": 3.669,
+          "strength": 0.797
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.061,
+          "end": 3.865,
+          "strength": 0.806
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.002,
+          "end": 3.669,
+          "strength": 0.653
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.14,
+          "end": 3.826,
+          "strength": 0.672
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.492,
+          "end": 4.257,
+          "strength": 0.805
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.649,
+          "end": 4.374,
+          "strength": 0.732
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.826,
+          "end": 4.57,
+          "strength": 0.781
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.492,
+          "end": 5.394,
+          "strength": 0.96
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.727,
+          "end": 5.57,
+          "strength": 0.883
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.982,
+          "end": 5.844,
+          "strength": 0.864
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.237,
+          "end": 6.138,
+          "strength": 0.893
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.315,
+          "end": 6.236,
+          "strength": 0.52
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.492,
+          "end": 6.393,
+          "strength": 0.55
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.295,
+          "end": 7.236,
+          "strength": 0.46
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.472,
+          "end": 7.334,
+          "strength": 0.48
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.648,
+          "end": 7.667,
+          "strength": 0.44
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.962,
+          "end": 7.902,
+          "strength": 0.756
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.844,
+          "end": 8.863,
+          "strength": 0.96
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.02,
+          "end": 9.02,
+          "strength": 0.787
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.255,
+          "end": 9.235,
+          "strength": 0.912
+        },
+        {
+          "edge_id": "E39",
+          "start": 8.471,
+          "end": 9.451,
+          "strength": 0.768
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.726,
+          "end": 9.666,
+          "strength": 0.659
+        },
+        {
+          "edge_id": "E40",
+          "start": 10.372,
+          "end": 11.254,
+          "strength": 0.422
+        },
+        {
+          "edge_id": "E37",
+          "start": 10.627,
+          "end": 11.45,
+          "strength": 0.557
+        },
+        {
+          "edge_id": "E42",
+          "start": 11.058,
+          "end": 11.94,
+          "strength": 0.42
+        },
+        {
+          "edge_id": "E44",
+          "start": 11.313,
+          "end": 12.234,
+          "strength": 0.732
+        }
+      ]
+    },
+    {
+      "id": "odor_familiar",
+      "label": "Familiar odor",
+      "summary": "Familiar olfactory-like cue favors stable hub integration and lower noise.",
+      "duration_s": 15.04,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.47,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.32,
+          "title": "Input onset",
+          "narration": "Familiar odor onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.02,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.35,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.89,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 10.65,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 13.19,
+          "title": "Stabilization",
+          "narration": "Familiar odor stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.32,
+          "end": 1.956,
+          "strength": 0.9
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.405,
+          "end": 2.062,
+          "strength": 0.855
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.532,
+          "end": 2.189,
+          "strength": 0.684
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.638,
+          "end": 2.327,
+          "strength": 0.63
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.786,
+          "end": 2.433,
+          "strength": 0.774
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.903,
+          "end": 2.571,
+          "strength": 0.738
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.126,
+          "end": 2.963,
+          "strength": 0.789
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.274,
+          "end": 3.101,
+          "strength": 0.626
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.804,
+          "end": 3.652,
+          "strength": 0.882
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.963,
+          "end": 3.758,
+          "strength": 0.792
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.037,
+          "end": 3.885,
+          "strength": 0.72
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.207,
+          "end": 4.034,
+          "strength": 0.747
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.376,
+          "end": 4.246,
+          "strength": 0.756
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.313,
+          "end": 4.034,
+          "strength": 0.612
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.461,
+          "end": 4.203,
+          "strength": 0.63
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.843,
+          "end": 4.67,
+          "strength": 0.634
+        },
+        {
+          "edge_id": "E18",
+          "start": 4.012,
+          "end": 4.797,
+          "strength": 0.576
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.203,
+          "end": 5.009,
+          "strength": 0.614
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.924,
+          "end": 5.899,
+          "strength": 0.9
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.178,
+          "end": 6.09,
+          "strength": 0.828
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.454,
+          "end": 6.387,
+          "strength": 0.81
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.73,
+          "end": 6.705,
+          "strength": 0.837
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.814,
+          "end": 6.811,
+          "strength": 0.603
+        },
+        {
+          "edge_id": "E32",
+          "start": 6.005,
+          "end": 6.98,
+          "strength": 0.638
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.874,
+          "end": 7.892,
+          "strength": 0.534
+        },
+        {
+          "edge_id": "E34",
+          "start": 7.065,
+          "end": 7.998,
+          "strength": 0.557
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.256,
+          "end": 8.358,
+          "strength": 0.51
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.595,
+          "end": 8.613,
+          "strength": 0.595
+        },
+        {
+          "edge_id": "E35",
+          "start": 8.549,
+          "end": 9.652,
+          "strength": 0.9
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.74,
+          "end": 9.821,
+          "strength": 0.738
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.994,
+          "end": 10.054,
+          "strength": 0.855
+        },
+        {
+          "edge_id": "E39",
+          "start": 9.228,
+          "end": 10.288,
+          "strength": 0.72
+        },
+        {
+          "edge_id": "E45",
+          "start": 9.503,
+          "end": 10.521,
+          "strength": 0.518
+        },
+        {
+          "edge_id": "E40",
+          "start": 11.284,
+          "end": 12.238,
+          "strength": 0.396
+        },
+        {
+          "edge_id": "E37",
+          "start": 11.56,
+          "end": 12.45,
+          "strength": 0.522
+        },
+        {
+          "edge_id": "E42",
+          "start": 12.026,
+          "end": 12.98,
+          "strength": 0.487
+        },
+        {
+          "edge_id": "E44",
+          "start": 12.302,
+          "end": 13.298,
+          "strength": 0.576
+        }
+      ]
+    },
+    {
+      "id": "odor_threat",
+      "label": "Threat odor",
+      "summary": "Threat-associated odor rapidly engages inhibition and decision competition.",
+      "duration_s": 13.5,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.27,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.03,
+          "title": "Input onset",
+          "narration": "Threat odor onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.55,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.64,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 6.92,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.39,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 11.67,
+          "title": "Stabilization",
+          "narration": "Threat odor stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.03,
+          "end": 1.6,
+          "strength": 1.1
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.106,
+          "end": 1.695,
+          "strength": 1.045
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.22,
+          "end": 1.809,
+          "strength": 0.836
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.315,
+          "end": 1.932,
+          "strength": 0.77
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.448,
+          "end": 2.027,
+          "strength": 0.946
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.552,
+          "end": 2.151,
+          "strength": 0.902
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.752,
+          "end": 2.502,
+          "strength": 0.653
+        },
+        {
+          "edge_id": "E08",
+          "start": 1.885,
+          "end": 2.626,
+          "strength": 0.518
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.36,
+          "end": 3.12,
+          "strength": 1.078
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.502,
+          "end": 3.215,
+          "strength": 0.968
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.569,
+          "end": 3.329,
+          "strength": 0.88
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.721,
+          "end": 3.462,
+          "strength": 0.913
+        },
+        {
+          "edge_id": "E15",
+          "start": 2.873,
+          "end": 3.652,
+          "strength": 0.924
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.816,
+          "end": 3.462,
+          "strength": 0.748
+        },
+        {
+          "edge_id": "E21",
+          "start": 2.949,
+          "end": 3.614,
+          "strength": 0.77
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.291,
+          "end": 4.032,
+          "strength": 0.818
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.443,
+          "end": 4.146,
+          "strength": 0.744
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.614,
+          "end": 4.336,
+          "strength": 0.794
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.26,
+          "end": 5.134,
+          "strength": 1.1
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.488,
+          "end": 5.305,
+          "strength": 1.012
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.735,
+          "end": 5.571,
+          "strength": 0.99
+        },
+        {
+          "edge_id": "E28",
+          "start": 4.982,
+          "end": 5.856,
+          "strength": 1.023
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.058,
+          "end": 5.951,
+          "strength": 0.499
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.229,
+          "end": 6.103,
+          "strength": 0.528
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.008,
+          "end": 6.92,
+          "strength": 0.442
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.179,
+          "end": 7.015,
+          "strength": 0.461
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.35,
+          "end": 7.338,
+          "strength": 0.422
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.654,
+          "end": 7.566,
+          "strength": 0.769
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.509,
+          "end": 8.497,
+          "strength": 1.1
+        },
+        {
+          "edge_id": "E36",
+          "start": 7.68,
+          "end": 8.649,
+          "strength": 0.902
+        },
+        {
+          "edge_id": "E38",
+          "start": 7.908,
+          "end": 8.858,
+          "strength": 1.045
+        },
+        {
+          "edge_id": "E39",
+          "start": 8.117,
+          "end": 9.067,
+          "strength": 0.88
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.364,
+          "end": 9.276,
+          "strength": 0.67
+        },
+        {
+          "edge_id": "E40",
+          "start": 9.96,
+          "end": 10.815,
+          "strength": 0.484
+        },
+        {
+          "edge_id": "E37",
+          "start": 10.207,
+          "end": 11.005,
+          "strength": 0.638
+        },
+        {
+          "edge_id": "E42",
+          "start": 10.625,
+          "end": 11.48,
+          "strength": 0.403
+        },
+        {
+          "edge_id": "E44",
+          "start": 10.872,
+          "end": 11.765,
+          "strength": 0.744
+        }
+      ]
+    },
+    {
+      "id": "balance_shift",
+      "label": "Balance shift",
+      "summary": "Vestibular-like perturbation drives distributed corrective routing.",
+      "duration_s": 15.46,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.44,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.31,
+          "title": "Input onset",
+          "narration": "Balance shift onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.05,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.45,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 8.07,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 10.9,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 13.52,
+          "title": "Stabilization",
+          "narration": "Balance shift stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.31,
+          "end": 1.964,
+          "strength": 0.92
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.397,
+          "end": 2.073,
+          "strength": 0.874
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.528,
+          "end": 2.204,
+          "strength": 0.699
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.637,
+          "end": 2.346,
+          "strength": 0.644
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.79,
+          "end": 2.455,
+          "strength": 0.791
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.91,
+          "end": 2.596,
+          "strength": 0.754
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.138,
+          "end": 3.0,
+          "strength": 0.707
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.291,
+          "end": 3.141,
+          "strength": 0.562
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.836,
+          "end": 3.708,
+          "strength": 0.902
+        },
+        {
+          "edge_id": "E11",
+          "start": 3.0,
+          "end": 3.817,
+          "strength": 0.81
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.076,
+          "end": 3.948,
+          "strength": 0.736
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.25,
+          "end": 4.1,
+          "strength": 0.764
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.425,
+          "end": 4.318,
+          "strength": 0.773
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.359,
+          "end": 4.1,
+          "strength": 0.626
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.512,
+          "end": 4.275,
+          "strength": 0.644
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.904,
+          "end": 4.754,
+          "strength": 0.713
+        },
+        {
+          "edge_id": "E18",
+          "start": 4.079,
+          "end": 4.885,
+          "strength": 0.648
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.275,
+          "end": 5.103,
+          "strength": 0.691
+        },
+        {
+          "edge_id": "E22",
+          "start": 5.016,
+          "end": 6.019,
+          "strength": 0.92
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.278,
+          "end": 6.215,
+          "strength": 0.846
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.561,
+          "end": 6.52,
+          "strength": 0.828
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.844,
+          "end": 6.847,
+          "strength": 0.856
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.932,
+          "end": 6.956,
+          "strength": 0.541
+        },
+        {
+          "edge_id": "E32",
+          "start": 6.128,
+          "end": 7.131,
+          "strength": 0.572
+        },
+        {
+          "edge_id": "E31",
+          "start": 7.022,
+          "end": 8.068,
+          "strength": 0.478
+        },
+        {
+          "edge_id": "E34",
+          "start": 7.218,
+          "end": 8.177,
+          "strength": 0.499
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.414,
+          "end": 8.548,
+          "strength": 0.458
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.763,
+          "end": 8.809,
+          "strength": 0.67
+        },
+        {
+          "edge_id": "E35",
+          "start": 8.744,
+          "end": 9.877,
+          "strength": 0.92
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.94,
+          "end": 10.052,
+          "strength": 0.754
+        },
+        {
+          "edge_id": "E38",
+          "start": 9.202,
+          "end": 10.292,
+          "strength": 0.874
+        },
+        {
+          "edge_id": "E39",
+          "start": 9.441,
+          "end": 10.531,
+          "strength": 0.736
+        },
+        {
+          "edge_id": "E45",
+          "start": 9.725,
+          "end": 10.771,
+          "strength": 0.583
+        },
+        {
+          "edge_id": "E40",
+          "start": 11.556,
+          "end": 12.537,
+          "strength": 0.405
+        },
+        {
+          "edge_id": "E37",
+          "start": 11.839,
+          "end": 12.755,
+          "strength": 0.534
+        },
+        {
+          "edge_id": "E42",
+          "start": 12.319,
+          "end": 13.3,
+          "strength": 0.437
+        },
+        {
+          "edge_id": "E44",
+          "start": 12.602,
+          "end": 13.627,
+          "strength": 0.648
+        }
+      ]
+    },
+    {
+      "id": "looming_object",
+      "label": "Looming object",
+      "summary": "Approach cue accelerates relay flow and amplifies late decision output.",
+      "duration_s": 13.08,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.18,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 0.92,
+          "title": "Input onset",
+          "narration": "Looming object onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.39,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.42,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 6.62,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.02,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 11.22,
+          "title": "Stabilization",
+          "narration": "Looming object stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 0.92,
+          "end": 1.472,
+          "strength": 1.16
+        },
+        {
+          "edge_id": "E03",
+          "start": 0.994,
+          "end": 1.564,
+          "strength": 1.102
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.104,
+          "end": 1.674,
+          "strength": 0.882
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.196,
+          "end": 1.794,
+          "strength": 0.812
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.325,
+          "end": 1.886,
+          "strength": 0.998
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.426,
+          "end": 2.006,
+          "strength": 0.951
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.619,
+          "end": 2.346,
+          "strength": 0.714
+        },
+        {
+          "edge_id": "E08",
+          "start": 1.748,
+          "end": 2.466,
+          "strength": 0.567
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.208,
+          "end": 2.944,
+          "strength": 1.137
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.346,
+          "end": 3.036,
+          "strength": 1.021
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.41,
+          "end": 3.146,
+          "strength": 0.928
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.558,
+          "end": 3.275,
+          "strength": 0.963
+        },
+        {
+          "edge_id": "E15",
+          "start": 2.705,
+          "end": 3.459,
+          "strength": 0.974
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.65,
+          "end": 3.275,
+          "strength": 0.789
+        },
+        {
+          "edge_id": "E21",
+          "start": 2.778,
+          "end": 3.422,
+          "strength": 0.812
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.11,
+          "end": 3.827,
+          "strength": 0.693
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.257,
+          "end": 3.938,
+          "strength": 0.63
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.422,
+          "end": 4.122,
+          "strength": 0.672
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.048,
+          "end": 4.894,
+          "strength": 1.16
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.269,
+          "end": 5.06,
+          "strength": 1.067
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.508,
+          "end": 5.318,
+          "strength": 1.044
+        },
+        {
+          "edge_id": "E28",
+          "start": 4.747,
+          "end": 5.594,
+          "strength": 1.079
+        },
+        {
+          "edge_id": "E29",
+          "start": 4.821,
+          "end": 5.686,
+          "strength": 0.546
+        },
+        {
+          "edge_id": "E32",
+          "start": 4.986,
+          "end": 5.833,
+          "strength": 0.578
+        },
+        {
+          "edge_id": "E31",
+          "start": 5.741,
+          "end": 6.624,
+          "strength": 0.483
+        },
+        {
+          "edge_id": "E34",
+          "start": 5.906,
+          "end": 6.716,
+          "strength": 0.504
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.072,
+          "end": 7.029,
+          "strength": 0.462
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.366,
+          "end": 7.25,
+          "strength": 0.651
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.194,
+          "end": 8.151,
+          "strength": 1.16
+        },
+        {
+          "edge_id": "E36",
+          "start": 7.36,
+          "end": 8.298,
+          "strength": 0.951
+        },
+        {
+          "edge_id": "E38",
+          "start": 7.581,
+          "end": 8.501,
+          "strength": 1.102
+        },
+        {
+          "edge_id": "E39",
+          "start": 7.783,
+          "end": 8.703,
+          "strength": 0.928
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.022,
+          "end": 8.906,
+          "strength": 0.567
+        },
+        {
+          "edge_id": "E40",
+          "start": 9.568,
+          "end": 10.396,
+          "strength": 0.51
+        },
+        {
+          "edge_id": "E37",
+          "start": 9.807,
+          "end": 10.58,
+          "strength": 0.673
+        },
+        {
+          "edge_id": "E42",
+          "start": 10.212,
+          "end": 11.04,
+          "strength": 0.441
+        },
+        {
+          "edge_id": "E44",
+          "start": 10.451,
+          "end": 11.316,
+          "strength": 0.63
+        }
+      ]
+    },
+    {
+      "id": "memory_cue",
+      "label": "Memory cue",
+      "summary": "Contextual memory retrieval increases modulatory weighting over hubs.",
+      "duration_s": 15.88,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.54,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.44,
+          "title": "Input onset",
+          "narration": "Memory cue onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.23,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.7,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 8.38,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 11.3,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 13.98,
+          "title": "Stabilization",
+          "narration": "Memory cue stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.44,
+          "end": 2.112,
+          "strength": 0.86
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.53,
+          "end": 2.224,
+          "strength": 0.817
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.664,
+          "end": 2.358,
+          "strength": 0.654
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.776,
+          "end": 2.504,
+          "strength": 0.602
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.933,
+          "end": 2.616,
+          "strength": 0.74
+        },
+        {
+          "edge_id": "E06",
+          "start": 2.056,
+          "end": 2.762,
+          "strength": 0.705
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.291,
+          "end": 3.176,
+          "strength": 0.884
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.448,
+          "end": 3.322,
+          "strength": 0.702
+        },
+        {
+          "edge_id": "E09",
+          "start": 3.008,
+          "end": 3.904,
+          "strength": 0.843
+        },
+        {
+          "edge_id": "E11",
+          "start": 3.176,
+          "end": 4.016,
+          "strength": 0.757
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.254,
+          "end": 4.15,
+          "strength": 0.688
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.434,
+          "end": 4.307,
+          "strength": 0.714
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.613,
+          "end": 4.531,
+          "strength": 0.722
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.546,
+          "end": 4.307,
+          "strength": 0.585
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.702,
+          "end": 4.486,
+          "strength": 0.602
+        },
+        {
+          "edge_id": "E16",
+          "start": 4.106,
+          "end": 4.979,
+          "strength": 0.62
+        },
+        {
+          "edge_id": "E18",
+          "start": 4.285,
+          "end": 5.114,
+          "strength": 0.564
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.486,
+          "end": 5.338,
+          "strength": 0.602
+        },
+        {
+          "edge_id": "E22",
+          "start": 5.248,
+          "end": 6.278,
+          "strength": 0.86
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.517,
+          "end": 6.48,
+          "strength": 0.791
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.808,
+          "end": 6.794,
+          "strength": 0.774
+        },
+        {
+          "edge_id": "E28",
+          "start": 6.099,
+          "end": 7.13,
+          "strength": 0.8
+        },
+        {
+          "edge_id": "E29",
+          "start": 6.189,
+          "end": 7.242,
+          "strength": 0.676
+        },
+        {
+          "edge_id": "E32",
+          "start": 6.39,
+          "end": 7.421,
+          "strength": 0.715
+        },
+        {
+          "edge_id": "E31",
+          "start": 7.309,
+          "end": 8.384,
+          "strength": 0.598
+        },
+        {
+          "edge_id": "E34",
+          "start": 7.51,
+          "end": 8.496,
+          "strength": 0.624
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.712,
+          "end": 8.877,
+          "strength": 0.572
+        },
+        {
+          "edge_id": "E43",
+          "start": 8.07,
+          "end": 9.146,
+          "strength": 0.583
+        },
+        {
+          "edge_id": "E35",
+          "start": 9.078,
+          "end": 10.243,
+          "strength": 0.86
+        },
+        {
+          "edge_id": "E36",
+          "start": 9.28,
+          "end": 10.422,
+          "strength": 0.705
+        },
+        {
+          "edge_id": "E38",
+          "start": 9.549,
+          "end": 10.669,
+          "strength": 0.817
+        },
+        {
+          "edge_id": "E39",
+          "start": 9.795,
+          "end": 10.915,
+          "strength": 0.688
+        },
+        {
+          "edge_id": "E45",
+          "start": 10.086,
+          "end": 11.162,
+          "strength": 0.508
+        },
+        {
+          "edge_id": "E40",
+          "start": 11.968,
+          "end": 12.976,
+          "strength": 0.378
+        },
+        {
+          "edge_id": "E37",
+          "start": 12.259,
+          "end": 13.2,
+          "strength": 0.499
+        },
+        {
+          "edge_id": "E42",
+          "start": 12.752,
+          "end": 13.76,
+          "strength": 0.546
+        },
+        {
+          "edge_id": "E44",
+          "start": 13.043,
+          "end": 14.096,
+          "strength": 0.564
+        }
+      ]
+    },
+    {
+      "id": "reward_cue",
+      "label": "Reward cue",
+      "summary": "Reward expectation strengthens dopaminergic-like facilitation downstream.",
+      "duration_s": 13.92,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.32,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.1,
+          "title": "Input onset",
+          "narration": "Reward cue onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.67,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.82,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.18,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.72,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 12.08,
+          "title": "Stabilization",
+          "narration": "Reward cue stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.1,
+          "end": 1.688,
+          "strength": 1.1
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.178,
+          "end": 1.786,
+          "strength": 1.045
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.296,
+          "end": 1.904,
+          "strength": 0.836
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.394,
+          "end": 2.031,
+          "strength": 0.77
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.531,
+          "end": 2.129,
+          "strength": 0.946
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.639,
+          "end": 2.256,
+          "strength": 0.902
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.845,
+          "end": 2.619,
+          "strength": 0.911
+        },
+        {
+          "edge_id": "E08",
+          "start": 1.982,
+          "end": 2.746,
+          "strength": 0.724
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.472,
+          "end": 3.256,
+          "strength": 1.078
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.619,
+          "end": 3.354,
+          "strength": 0.968
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.688,
+          "end": 3.472,
+          "strength": 0.88
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.844,
+          "end": 3.609,
+          "strength": 0.913
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.001,
+          "end": 3.805,
+          "strength": 0.924
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.942,
+          "end": 3.609,
+          "strength": 0.748
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.08,
+          "end": 3.766,
+          "strength": 0.77
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.432,
+          "end": 4.197,
+          "strength": 0.581
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.589,
+          "end": 4.314,
+          "strength": 0.528
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.766,
+          "end": 4.51,
+          "strength": 0.563
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.432,
+          "end": 5.334,
+          "strength": 1.1
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.667,
+          "end": 5.51,
+          "strength": 1.012
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.922,
+          "end": 5.784,
+          "strength": 0.99
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.177,
+          "end": 6.078,
+          "strength": 1.023
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.255,
+          "end": 6.176,
+          "strength": 0.697
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.432,
+          "end": 6.333,
+          "strength": 0.737
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.235,
+          "end": 7.176,
+          "strength": 0.616
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.412,
+          "end": 7.274,
+          "strength": 0.643
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.588,
+          "end": 7.607,
+          "strength": 0.59
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.902,
+          "end": 7.842,
+          "strength": 0.546
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.784,
+          "end": 8.803,
+          "strength": 1.1
+        },
+        {
+          "edge_id": "E36",
+          "start": 7.96,
+          "end": 8.96,
+          "strength": 0.902
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.195,
+          "end": 9.175,
+          "strength": 1.045
+        },
+        {
+          "edge_id": "E39",
+          "start": 8.411,
+          "end": 9.391,
+          "strength": 0.88
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.666,
+          "end": 9.606,
+          "strength": 0.475
+        },
+        {
+          "edge_id": "E40",
+          "start": 10.312,
+          "end": 11.194,
+          "strength": 0.484
+        },
+        {
+          "edge_id": "E37",
+          "start": 10.567,
+          "end": 11.39,
+          "strength": 0.638
+        },
+        {
+          "edge_id": "E42",
+          "start": 10.998,
+          "end": 11.88,
+          "strength": 0.563
+        },
+        {
+          "edge_id": "E44",
+          "start": 11.253,
+          "end": 12.174,
+          "strength": 0.528
+        }
+      ]
+    },
+    {
+      "id": "threat_cue",
+      "label": "Threat cue",
+      "summary": "Threat anticipation sharpens inhibition and branch selectivity.",
+      "duration_s": 13.22,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.25,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 0.99,
+          "title": "Input onset",
+          "narration": "Threat cue onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.48,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.52,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 6.76,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.17,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 11.41,
+          "title": "Stabilization",
+          "narration": "Threat cue stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 0.99,
+          "end": 1.548,
+          "strength": 1.12
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.064,
+          "end": 1.641,
+          "strength": 1.064
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.176,
+          "end": 1.753,
+          "strength": 0.851
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.269,
+          "end": 1.874,
+          "strength": 0.784
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.399,
+          "end": 1.966,
+          "strength": 0.963
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.502,
+          "end": 2.087,
+          "strength": 0.918
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.697,
+          "end": 2.432,
+          "strength": 0.639
+        },
+        {
+          "edge_id": "E08",
+          "start": 1.827,
+          "end": 2.552,
+          "strength": 0.508
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.292,
+          "end": 3.036,
+          "strength": 1.098
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.432,
+          "end": 3.129,
+          "strength": 0.986
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.497,
+          "end": 3.241,
+          "strength": 0.896
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.645,
+          "end": 3.371,
+          "strength": 0.93
+        },
+        {
+          "edge_id": "E15",
+          "start": 2.794,
+          "end": 3.557,
+          "strength": 0.941
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.738,
+          "end": 3.371,
+          "strength": 0.762
+        },
+        {
+          "edge_id": "E21",
+          "start": 2.869,
+          "end": 3.52,
+          "strength": 0.784
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.203,
+          "end": 3.929,
+          "strength": 0.858
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.352,
+          "end": 4.04,
+          "strength": 0.78
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.52,
+          "end": 4.226,
+          "strength": 0.832
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.152,
+          "end": 5.008,
+          "strength": 1.12
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.375,
+          "end": 5.175,
+          "strength": 1.03
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.617,
+          "end": 5.435,
+          "strength": 1.008
+        },
+        {
+          "edge_id": "E28",
+          "start": 4.859,
+          "end": 5.714,
+          "strength": 1.042
+        },
+        {
+          "edge_id": "E29",
+          "start": 4.933,
+          "end": 5.807,
+          "strength": 0.489
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.101,
+          "end": 5.956,
+          "strength": 0.517
+        },
+        {
+          "edge_id": "E31",
+          "start": 5.863,
+          "end": 6.756,
+          "strength": 0.432
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.031,
+          "end": 6.849,
+          "strength": 0.451
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.198,
+          "end": 7.165,
+          "strength": 0.414
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.496,
+          "end": 7.388,
+          "strength": 0.806
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.333,
+          "end": 8.3,
+          "strength": 1.12
+        },
+        {
+          "edge_id": "E36",
+          "start": 7.5,
+          "end": 8.449,
+          "strength": 0.918
+        },
+        {
+          "edge_id": "E38",
+          "start": 7.723,
+          "end": 8.653,
+          "strength": 1.064
+        },
+        {
+          "edge_id": "E39",
+          "start": 7.928,
+          "end": 8.858,
+          "strength": 0.896
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.17,
+          "end": 9.062,
+          "strength": 0.702
+        },
+        {
+          "edge_id": "E40",
+          "start": 9.732,
+          "end": 10.569,
+          "strength": 0.493
+        },
+        {
+          "edge_id": "E37",
+          "start": 9.974,
+          "end": 10.755,
+          "strength": 0.65
+        },
+        {
+          "edge_id": "E42",
+          "start": 10.383,
+          "end": 11.22,
+          "strength": 0.395
+        },
+        {
+          "edge_id": "E44",
+          "start": 10.625,
+          "end": 11.499,
+          "strength": 0.78
+        }
+      ]
+    },
+    {
+      "id": "focused_attention",
+      "label": "Focused attention",
+      "summary": "Top-down attentional context boosts precision in selected pathways.",
+      "duration_s": 14.76,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.46,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.29,
+          "title": "Input onset",
+          "narration": "Focused attention onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.95,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 5.24,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.74,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 10.44,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 12.94,
+          "title": "Stabilization",
+          "narration": "Focused attention stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.29,
+          "end": 1.914,
+          "strength": 1.02
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.373,
+          "end": 2.018,
+          "strength": 0.969
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.498,
+          "end": 2.143,
+          "strength": 0.775
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.602,
+          "end": 2.278,
+          "strength": 0.714
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.748,
+          "end": 2.382,
+          "strength": 0.877
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.862,
+          "end": 2.517,
+          "strength": 0.836
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.08,
+          "end": 2.902,
+          "strength": 0.87
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.226,
+          "end": 3.037,
+          "strength": 0.691
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.746,
+          "end": 3.578,
+          "strength": 1.0
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.902,
+          "end": 3.682,
+          "strength": 0.898
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.975,
+          "end": 3.807,
+          "strength": 0.816
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.141,
+          "end": 3.952,
+          "strength": 0.847
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.308,
+          "end": 4.16,
+          "strength": 0.857
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.245,
+          "end": 3.952,
+          "strength": 0.694
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.391,
+          "end": 4.119,
+          "strength": 0.714
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.765,
+          "end": 4.576,
+          "strength": 0.607
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.932,
+          "end": 4.701,
+          "strength": 0.552
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.119,
+          "end": 4.909,
+          "strength": 0.589
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.826,
+          "end": 5.783,
+          "strength": 1.02
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.076,
+          "end": 5.97,
+          "strength": 0.938
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.346,
+          "end": 6.261,
+          "strength": 0.918
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.616,
+          "end": 6.573,
+          "strength": 0.949
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.7,
+          "end": 6.677,
+          "strength": 0.666
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.887,
+          "end": 6.844,
+          "strength": 0.704
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.74,
+          "end": 7.738,
+          "strength": 0.589
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.927,
+          "end": 7.842,
+          "strength": 0.614
+        },
+        {
+          "edge_id": "E41",
+          "start": 7.114,
+          "end": 8.196,
+          "strength": 0.563
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.447,
+          "end": 8.445,
+          "strength": 0.57
+        },
+        {
+          "edge_id": "E35",
+          "start": 8.383,
+          "end": 9.464,
+          "strength": 1.02
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.57,
+          "end": 9.631,
+          "strength": 0.836
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.82,
+          "end": 9.86,
+          "strength": 0.969
+        },
+        {
+          "edge_id": "E39",
+          "start": 9.048,
+          "end": 10.088,
+          "strength": 0.816
+        },
+        {
+          "edge_id": "E45",
+          "start": 9.319,
+          "end": 10.317,
+          "strength": 0.497
+        },
+        {
+          "edge_id": "E40",
+          "start": 11.066,
+          "end": 12.002,
+          "strength": 0.449
+        },
+        {
+          "edge_id": "E37",
+          "start": 11.336,
+          "end": 12.21,
+          "strength": 0.592
+        },
+        {
+          "edge_id": "E42",
+          "start": 11.794,
+          "end": 12.73,
+          "strength": 0.538
+        },
+        {
+          "edge_id": "E44",
+          "start": 12.064,
+          "end": 13.042,
+          "strength": 0.552
+        }
+      ]
+    },
+    {
+      "id": "relaxed_state",
+      "label": "Relaxed state",
+      "summary": "Low-arousal context slows propagation and smooths transitions.",
+      "duration_s": 16.44,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.68,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.61,
+          "title": "Input onset",
+          "narration": "Relaxed state onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.47,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 6.02,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 8.8,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 11.82,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 14.6,
+          "title": "Stabilization",
+          "narration": "Relaxed state stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.61,
+          "end": 2.306,
+          "strength": 0.8
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.703,
+          "end": 2.422,
+          "strength": 0.76
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.842,
+          "end": 2.561,
+          "strength": 0.608
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.958,
+          "end": 2.712,
+          "strength": 0.56
+        },
+        {
+          "edge_id": "E05",
+          "start": 2.12,
+          "end": 2.828,
+          "strength": 0.688
+        },
+        {
+          "edge_id": "E06",
+          "start": 2.248,
+          "end": 2.979,
+          "strength": 0.656
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.492,
+          "end": 3.408,
+          "strength": 0.734
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.654,
+          "end": 3.559,
+          "strength": 0.583
+        },
+        {
+          "edge_id": "E09",
+          "start": 3.234,
+          "end": 4.162,
+          "strength": 0.784
+        },
+        {
+          "edge_id": "E11",
+          "start": 3.408,
+          "end": 4.278,
+          "strength": 0.704
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.489,
+          "end": 4.417,
+          "strength": 0.64
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.675,
+          "end": 4.58,
+          "strength": 0.664
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.86,
+          "end": 4.812,
+          "strength": 0.672
+        },
+        {
+          "edge_id": "E20",
+          "start": 3.791,
+          "end": 4.58,
+          "strength": 0.544
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.953,
+          "end": 4.765,
+          "strength": 0.56
+        },
+        {
+          "edge_id": "E16",
+          "start": 4.371,
+          "end": 5.276,
+          "strength": 0.594
+        },
+        {
+          "edge_id": "E18",
+          "start": 4.556,
+          "end": 5.415,
+          "strength": 0.54
+        },
+        {
+          "edge_id": "E19",
+          "start": 4.765,
+          "end": 5.647,
+          "strength": 0.576
+        },
+        {
+          "edge_id": "E22",
+          "start": 5.554,
+          "end": 6.621,
+          "strength": 0.8
+        },
+        {
+          "edge_id": "E24",
+          "start": 5.832,
+          "end": 6.83,
+          "strength": 0.736
+        },
+        {
+          "edge_id": "E26",
+          "start": 6.134,
+          "end": 7.155,
+          "strength": 0.72
+        },
+        {
+          "edge_id": "E28",
+          "start": 6.436,
+          "end": 7.503,
+          "strength": 0.744
+        },
+        {
+          "edge_id": "E29",
+          "start": 6.528,
+          "end": 7.619,
+          "strength": 0.562
+        },
+        {
+          "edge_id": "E32",
+          "start": 6.737,
+          "end": 7.804,
+          "strength": 0.594
+        },
+        {
+          "edge_id": "E31",
+          "start": 7.688,
+          "end": 8.802,
+          "strength": 0.497
+        },
+        {
+          "edge_id": "E34",
+          "start": 7.897,
+          "end": 8.918,
+          "strength": 0.518
+        },
+        {
+          "edge_id": "E41",
+          "start": 8.106,
+          "end": 9.312,
+          "strength": 0.475
+        },
+        {
+          "edge_id": "E43",
+          "start": 8.477,
+          "end": 9.591,
+          "strength": 0.558
+        },
+        {
+          "edge_id": "E35",
+          "start": 9.521,
+          "end": 10.728,
+          "strength": 0.8
+        },
+        {
+          "edge_id": "E36",
+          "start": 9.73,
+          "end": 10.913,
+          "strength": 0.656
+        },
+        {
+          "edge_id": "E38",
+          "start": 10.008,
+          "end": 11.168,
+          "strength": 0.76
+        },
+        {
+          "edge_id": "E39",
+          "start": 10.264,
+          "end": 11.424,
+          "strength": 0.64
+        },
+        {
+          "edge_id": "E45",
+          "start": 10.565,
+          "end": 11.679,
+          "strength": 0.486
+        },
+        {
+          "edge_id": "E40",
+          "start": 12.514,
+          "end": 13.558,
+          "strength": 0.352
+        },
+        {
+          "edge_id": "E37",
+          "start": 12.816,
+          "end": 13.79,
+          "strength": 0.464
+        },
+        {
+          "edge_id": "E42",
+          "start": 13.326,
+          "end": 14.37,
+          "strength": 0.454
+        },
+        {
+          "edge_id": "E44",
+          "start": 13.628,
+          "end": 14.718,
+          "strength": 0.54
+        }
+      ]
+    },
+    {
+      "id": "caffeine_arousal",
+      "label": "Caffeine-like arousal",
+      "summary": "Arousal context speeds early transmission and raises gain.",
+      "duration_s": 12.52,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.18,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 0.88,
+          "title": "Input onset",
+          "narration": "Caffeine-like arousal onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.29,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.22,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 6.34,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 8.62,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 10.74,
+          "title": "Stabilization",
+          "narration": "Caffeine-like arousal stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 0.88,
+          "end": 1.408,
+          "strength": 1.22
+        },
+        {
+          "edge_id": "E03",
+          "start": 0.95,
+          "end": 1.496,
+          "strength": 1.159
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.056,
+          "end": 1.602,
+          "strength": 0.927
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.144,
+          "end": 1.716,
+          "strength": 0.854
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.267,
+          "end": 1.804,
+          "strength": 1.049
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.364,
+          "end": 1.918,
+          "strength": 1.0
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.549,
+          "end": 2.244,
+          "strength": 0.762
+        },
+        {
+          "edge_id": "E08",
+          "start": 1.672,
+          "end": 2.358,
+          "strength": 0.605
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.112,
+          "end": 2.816,
+          "strength": 1.196
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.244,
+          "end": 2.904,
+          "strength": 1.074
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.306,
+          "end": 3.01,
+          "strength": 0.976
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.446,
+          "end": 3.133,
+          "strength": 1.013
+        },
+        {
+          "edge_id": "E15",
+          "start": 2.587,
+          "end": 3.309,
+          "strength": 1.025
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.534,
+          "end": 3.133,
+          "strength": 0.83
+        },
+        {
+          "edge_id": "E21",
+          "start": 2.658,
+          "end": 3.274,
+          "strength": 0.854
+        },
+        {
+          "edge_id": "E16",
+          "start": 2.974,
+          "end": 3.661,
+          "strength": 0.62
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.115,
+          "end": 3.766,
+          "strength": 0.564
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.274,
+          "end": 3.942,
+          "strength": 0.602
+        },
+        {
+          "edge_id": "E22",
+          "start": 3.872,
+          "end": 4.682,
+          "strength": 1.22
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.083,
+          "end": 4.84,
+          "strength": 1.122
+        },
+        {
+          "edge_id": "E26",
+          "start": 4.312,
+          "end": 5.086,
+          "strength": 1.098
+        },
+        {
+          "edge_id": "E28",
+          "start": 4.541,
+          "end": 5.35,
+          "strength": 1.135
+        },
+        {
+          "edge_id": "E29",
+          "start": 4.611,
+          "end": 5.438,
+          "strength": 0.582
+        },
+        {
+          "edge_id": "E32",
+          "start": 4.77,
+          "end": 5.579,
+          "strength": 0.616
+        },
+        {
+          "edge_id": "E31",
+          "start": 5.491,
+          "end": 6.336,
+          "strength": 0.515
+        },
+        {
+          "edge_id": "E34",
+          "start": 5.65,
+          "end": 6.424,
+          "strength": 0.538
+        },
+        {
+          "edge_id": "E41",
+          "start": 5.808,
+          "end": 6.723,
+          "strength": 0.493
+        },
+        {
+          "edge_id": "E43",
+          "start": 6.09,
+          "end": 6.934,
+          "strength": 0.583
+        },
+        {
+          "edge_id": "E35",
+          "start": 6.882,
+          "end": 7.797,
+          "strength": 1.22
+        },
+        {
+          "edge_id": "E36",
+          "start": 7.04,
+          "end": 7.938,
+          "strength": 1.0
+        },
+        {
+          "edge_id": "E38",
+          "start": 7.251,
+          "end": 8.131,
+          "strength": 1.159
+        },
+        {
+          "edge_id": "E39",
+          "start": 7.445,
+          "end": 8.325,
+          "strength": 0.976
+        },
+        {
+          "edge_id": "E45",
+          "start": 7.674,
+          "end": 8.518,
+          "strength": 0.508
+        },
+        {
+          "edge_id": "E40",
+          "start": 9.152,
+          "end": 9.944,
+          "strength": 0.537
+        },
+        {
+          "edge_id": "E37",
+          "start": 9.381,
+          "end": 10.12,
+          "strength": 0.708
+        },
+        {
+          "edge_id": "E42",
+          "start": 9.768,
+          "end": 10.56,
+          "strength": 0.47
+        },
+        {
+          "edge_id": "E44",
+          "start": 9.997,
+          "end": 10.824,
+          "strength": 0.564
+        }
+      ]
+    },
+    {
+      "id": "fatigue_state",
+      "label": "Fatigue state",
+      "summary": "Fatigue-like context reduces excitatory throughput and prolongs settling.",
+      "duration_s": 17.28,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.74,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.72,
+          "title": "Input onset",
+          "narration": "Fatigue state onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 3.67,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 6.36,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 9.28,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 12.46,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 15.38,
+          "title": "Stabilization",
+          "narration": "Fatigue state stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.72,
+          "end": 2.452,
+          "strength": 0.76
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.818,
+          "end": 2.574,
+          "strength": 0.722
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.964,
+          "end": 2.72,
+          "strength": 0.578
+        },
+        {
+          "edge_id": "E04",
+          "start": 2.086,
+          "end": 2.879,
+          "strength": 0.532
+        },
+        {
+          "edge_id": "E05",
+          "start": 2.257,
+          "end": 3.001,
+          "strength": 0.654
+        },
+        {
+          "edge_id": "E06",
+          "start": 2.391,
+          "end": 3.16,
+          "strength": 0.623
+        },
+        {
+          "edge_id": "E07",
+          "start": 2.647,
+          "end": 3.611,
+          "strength": 0.666
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.818,
+          "end": 3.77,
+          "strength": 0.529
+        },
+        {
+          "edge_id": "E09",
+          "start": 3.428,
+          "end": 4.404,
+          "strength": 0.745
+        },
+        {
+          "edge_id": "E11",
+          "start": 3.611,
+          "end": 4.526,
+          "strength": 0.669
+        },
+        {
+          "edge_id": "E12",
+          "start": 3.696,
+          "end": 4.672,
+          "strength": 0.608
+        },
+        {
+          "edge_id": "E13",
+          "start": 3.892,
+          "end": 4.843,
+          "strength": 0.631
+        },
+        {
+          "edge_id": "E15",
+          "start": 4.087,
+          "end": 5.087,
+          "strength": 0.638
+        },
+        {
+          "edge_id": "E20",
+          "start": 4.014,
+          "end": 4.843,
+          "strength": 0.517
+        },
+        {
+          "edge_id": "E21",
+          "start": 4.184,
+          "end": 5.038,
+          "strength": 0.532
+        },
+        {
+          "edge_id": "E16",
+          "start": 4.624,
+          "end": 5.575,
+          "strength": 0.713
+        },
+        {
+          "edge_id": "E18",
+          "start": 4.819,
+          "end": 5.722,
+          "strength": 0.648
+        },
+        {
+          "edge_id": "E19",
+          "start": 5.038,
+          "end": 5.966,
+          "strength": 0.691
+        },
+        {
+          "edge_id": "E22",
+          "start": 5.868,
+          "end": 6.99,
+          "strength": 0.76
+        },
+        {
+          "edge_id": "E24",
+          "start": 6.161,
+          "end": 7.21,
+          "strength": 0.699
+        },
+        {
+          "edge_id": "E26",
+          "start": 6.478,
+          "end": 7.552,
+          "strength": 0.684
+        },
+        {
+          "edge_id": "E28",
+          "start": 6.795,
+          "end": 7.918,
+          "strength": 0.707
+        },
+        {
+          "edge_id": "E29",
+          "start": 6.893,
+          "end": 8.04,
+          "strength": 0.51
+        },
+        {
+          "edge_id": "E32",
+          "start": 7.112,
+          "end": 8.235,
+          "strength": 0.539
+        },
+        {
+          "edge_id": "E31",
+          "start": 8.113,
+          "end": 9.284,
+          "strength": 0.451
+        },
+        {
+          "edge_id": "E34",
+          "start": 8.332,
+          "end": 9.406,
+          "strength": 0.47
+        },
+        {
+          "edge_id": "E41",
+          "start": 8.552,
+          "end": 9.821,
+          "strength": 0.431
+        },
+        {
+          "edge_id": "E43",
+          "start": 8.942,
+          "end": 10.114,
+          "strength": 0.67
+        },
+        {
+          "edge_id": "E35",
+          "start": 10.04,
+          "end": 11.309,
+          "strength": 0.76
+        },
+        {
+          "edge_id": "E36",
+          "start": 10.26,
+          "end": 11.504,
+          "strength": 0.623
+        },
+        {
+          "edge_id": "E38",
+          "start": 10.553,
+          "end": 11.773,
+          "strength": 0.722
+        },
+        {
+          "edge_id": "E39",
+          "start": 10.821,
+          "end": 12.041,
+          "strength": 0.608
+        },
+        {
+          "edge_id": "E45",
+          "start": 11.138,
+          "end": 12.31,
+          "strength": 0.583
+        },
+        {
+          "edge_id": "E40",
+          "start": 13.188,
+          "end": 14.286,
+          "strength": 0.334
+        },
+        {
+          "edge_id": "E37",
+          "start": 13.505,
+          "end": 14.53,
+          "strength": 0.441
+        },
+        {
+          "edge_id": "E42",
+          "start": 14.042,
+          "end": 15.14,
+          "strength": 0.412
+        },
+        {
+          "edge_id": "E44",
+          "start": 14.359,
+          "end": 15.506,
+          "strength": 0.648
+        }
+      ]
+    },
+    {
+      "id": "voluntary_move",
+      "label": "Voluntary move command",
+      "summary": "Goal-directed command channels convergent activity to motor outputs.",
+      "duration_s": 14.2,
+      "confidence": "educational",
+      "evidence": "Conceptual synthesis of canonical excitatory-inhibitory-modulatory circuit motifs.",
+      "mechanism": "Radial web deterministic propagation with ring and cross-link routing under milestone-stepped timeline control.",
+      "citation_tags": [
+        "Kole and Stuart 2012 Neuron",
+        "Sudhof 2013 Neuron",
+        "London and Hausser 2005 Annu Rev Neurosci"
+      ],
+      "links": [
+        {
+          "label": "Kole and Stuart 2012",
+          "href": "https://doi.org/10.1016/j.neuron.2012.01.007"
+        },
+        {
+          "label": "Sudhof 2013",
+          "href": "https://doi.org/10.1016/j.neuron.2013.10.022"
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m0",
+          "t": 0.3,
+          "title": "Baseline",
+          "narration": "The network starts near resting baseline with low background activity.",
+          "neuron_id": "N06"
+        },
+        {
+          "id": "m1",
+          "t": 1.1,
+          "title": "Input onset",
+          "narration": "Voluntary move command onset: upstream sensory channels start deterministic drive into relay neurons.",
+          "neuron_id": "N01"
+        },
+        {
+          "id": "m2",
+          "t": 2.7,
+          "title": "Relay convergence",
+          "narration": "Activity converges onto hubs N11 and N12 while inhibitory gate A starts shaping spread.",
+          "neuron_id": "N11"
+        },
+        {
+          "id": "m3",
+          "t": 4.9,
+          "title": "Mid-network split",
+          "narration": "Propagation splits into upper and lower hub lanes with selective gain from modulatory nodes.",
+          "neuron_id": "N13"
+        },
+        {
+          "id": "m4",
+          "t": 7.3,
+          "title": "Decision layer",
+          "narration": "Decision neurons accumulate weighted input and begin committing toward output channels.",
+          "neuron_id": "N18"
+        },
+        {
+          "id": "m5",
+          "t": 9.9,
+          "title": "Output transfer",
+          "narration": "Late-stage pulses reach motor outputs N23 and N24 with branch-specific intensity.",
+          "neuron_id": "N23"
+        },
+        {
+          "id": "m6",
+          "t": 12.3,
+          "title": "Stabilization",
+          "narration": "Voluntary move command stabilization: inhibitory and modulatory lanes settle the network toward reset.",
+          "neuron_id": "N22"
+        }
+      ],
+      "events": [
+        {
+          "edge_id": "E01",
+          "start": 1.1,
+          "end": 1.7,
+          "strength": 1.12
+        },
+        {
+          "edge_id": "E03",
+          "start": 1.18,
+          "end": 1.8,
+          "strength": 1.064
+        },
+        {
+          "edge_id": "E02",
+          "start": 1.3,
+          "end": 1.92,
+          "strength": 0.851
+        },
+        {
+          "edge_id": "E04",
+          "start": 1.4,
+          "end": 2.05,
+          "strength": 0.784
+        },
+        {
+          "edge_id": "E05",
+          "start": 1.54,
+          "end": 2.15,
+          "strength": 0.963
+        },
+        {
+          "edge_id": "E06",
+          "start": 1.65,
+          "end": 2.28,
+          "strength": 0.918
+        },
+        {
+          "edge_id": "E07",
+          "start": 1.86,
+          "end": 2.65,
+          "strength": 0.748
+        },
+        {
+          "edge_id": "E08",
+          "start": 2.0,
+          "end": 2.78,
+          "strength": 0.594
+        },
+        {
+          "edge_id": "E09",
+          "start": 2.5,
+          "end": 3.3,
+          "strength": 1.098
+        },
+        {
+          "edge_id": "E11",
+          "start": 2.65,
+          "end": 3.4,
+          "strength": 0.986
+        },
+        {
+          "edge_id": "E12",
+          "start": 2.72,
+          "end": 3.52,
+          "strength": 0.896
+        },
+        {
+          "edge_id": "E13",
+          "start": 2.88,
+          "end": 3.66,
+          "strength": 0.93
+        },
+        {
+          "edge_id": "E15",
+          "start": 3.04,
+          "end": 3.86,
+          "strength": 0.941
+        },
+        {
+          "edge_id": "E20",
+          "start": 2.98,
+          "end": 3.66,
+          "strength": 0.762
+        },
+        {
+          "edge_id": "E21",
+          "start": 3.12,
+          "end": 3.82,
+          "strength": 0.784
+        },
+        {
+          "edge_id": "E16",
+          "start": 3.48,
+          "end": 4.26,
+          "strength": 0.647
+        },
+        {
+          "edge_id": "E18",
+          "start": 3.64,
+          "end": 4.38,
+          "strength": 0.588
+        },
+        {
+          "edge_id": "E19",
+          "start": 3.82,
+          "end": 4.58,
+          "strength": 0.627
+        },
+        {
+          "edge_id": "E22",
+          "start": 4.5,
+          "end": 5.42,
+          "strength": 1.12
+        },
+        {
+          "edge_id": "E24",
+          "start": 4.74,
+          "end": 5.6,
+          "strength": 1.03
+        },
+        {
+          "edge_id": "E26",
+          "start": 5.0,
+          "end": 5.88,
+          "strength": 1.008
+        },
+        {
+          "edge_id": "E28",
+          "start": 5.26,
+          "end": 6.18,
+          "strength": 1.042
+        },
+        {
+          "edge_id": "E29",
+          "start": 5.34,
+          "end": 6.28,
+          "strength": 0.572
+        },
+        {
+          "edge_id": "E32",
+          "start": 5.52,
+          "end": 6.44,
+          "strength": 0.605
+        },
+        {
+          "edge_id": "E31",
+          "start": 6.34,
+          "end": 7.3,
+          "strength": 0.506
+        },
+        {
+          "edge_id": "E34",
+          "start": 6.52,
+          "end": 7.4,
+          "strength": 0.528
+        },
+        {
+          "edge_id": "E41",
+          "start": 6.7,
+          "end": 7.74,
+          "strength": 0.484
+        },
+        {
+          "edge_id": "E43",
+          "start": 7.02,
+          "end": 7.98,
+          "strength": 0.608
+        },
+        {
+          "edge_id": "E35",
+          "start": 7.92,
+          "end": 8.96,
+          "strength": 1.12
+        },
+        {
+          "edge_id": "E36",
+          "start": 8.1,
+          "end": 9.12,
+          "strength": 0.918
+        },
+        {
+          "edge_id": "E38",
+          "start": 8.34,
+          "end": 9.34,
+          "strength": 1.064
+        },
+        {
+          "edge_id": "E39",
+          "start": 8.56,
+          "end": 9.56,
+          "strength": 0.896
+        },
+        {
+          "edge_id": "E45",
+          "start": 8.82,
+          "end": 9.78,
+          "strength": 0.529
+        },
+        {
+          "edge_id": "E40",
+          "start": 10.5,
+          "end": 11.4,
+          "strength": 0.493
+        },
+        {
+          "edge_id": "E37",
+          "start": 10.76,
+          "end": 11.6,
+          "strength": 0.65
+        },
+        {
+          "edge_id": "E42",
+          "start": 11.2,
+          "end": 12.1,
+          "strength": 0.462
+        },
+        {
+          "edge_id": "E44",
+          "start": 11.46,
+          "end": 12.4,
+          "strength": 0.588
+        }
+      ]
+    }
+  ]
+}
